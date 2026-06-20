@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhoneGrid Uganda — Compare, Buy & Track Phones | Best Prices in UGX</title>
+<meta name="description" content="iSam Store — your #1 destination for Apple iPhone and Samsung Galaxy phones. Compare specs, track prices, and buy the latest models at the best USD prices.">
+<meta property="og:title" content="iSam Store — iPhone &amp; Samsung Galaxy">
+<meta property="og:description" content="Compare iPhone vs Samsung Galaxy side-by-side, track price drops, and find the best deals.">
+<link rel="manifest" href="data:application/json,{}">
+<meta name="theme-color" content="#0A0A0F">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Amazon-inspired palette */
+  --bg:#F3F3F3; --surface:#FFFFFF; --surface2:#F8F8F8; --border:#D5D9D9; --border2:#B5B9B9;
+  --accent:#FF9900; --accent2:#E47911; --accent3:#007185;
+  --text:#0F1111; --muted:#565959; --tag-bg:#F0F2F2; --radius:8px;
+  --success:#007600; --error:#C40000; --warning:#FF9900;
+  --ugx:#B12704; --amazon-navy:#131921; --amazon-blue:#146EB4; --amazon-light-blue:#ECF6FF;
+  --prime:#00A8E0; --star:#FF9900;
+  --card-shadow:0 2px 5px rgba(15,17,17,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;min-height:100vh;overflow-x:hidden;}
+
+
+/* ── Brand identity ── */
+.brand-apple { color: #007AFF !important; }
+.brand-samsung { color: #1428A0 !important; }
+.brand-pill-apple { background:#007AFF22; color:#007AFF; border:1px solid #007AFF55; border-radius:20px; padding:2px 10px; font-size:0.72rem; font-weight:700; }
+.brand-pill-samsung { background:#1428A022; color:#1428A0; border:1px solid #1428A055; border-radius:20px; padding:2px 10px; font-size:0.72rem; font-weight:700; }
+
+/* ── AMAZON-STYLE NAV ── */
+nav{position:sticky;top:0;z-index:100;background:var(--amazon-navy);border-bottom:3px solid var(--accent);}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:8px 20px;gap:12px;}
+.brand-banner{background:linear-gradient(90deg,#007AFF 0%,#007AFF 50%,#1428A0 50%,#1428A0 100%);height:3px;}
+.logo{font-family:'Space Mono',monospace;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:-0.5px;cursor:pointer;border:2px solid transparent;padding:4px 8px;border-radius:4px;transition:border-color 0.15s;}
+.logo:hover{border-color:var(--accent);}
+.logo span{font-size:0.65rem;color:var(--accent);margin-left:2px;vertical-align:top;margin-top:3px;display:inline-block;}
+.nav-search-bar{flex:1;max-width:700px;display:flex;border-radius:4px;overflow:hidden;border:2px solid var(--accent);}
+.nav-search-bar input{flex:1;padding:8px 14px;border:none;outline:none;font-family:'Space Grotesk',sans-serif;font-size:0.9rem;color:var(--text);}
+.nav-search-btn{background:var(--accent);border:none;padding:0 16px;cursor:pointer;font-size:1.1rem;color:var(--amazon-navy);}
+.nav-search-btn:hover{background:var(--accent2);}
+.nav-links{display:flex;gap:0;align-items:center;}
+.nav-links a{color:#ccc;text-decoration:none;font-size:0.78rem;transition:color 0.15s;cursor:pointer;padding:4px 10px;border-radius:3px;border:1px solid transparent;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#fff;border-color:var(--accent);}
+.nav-right{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+.nav-fav-count{display:inline-flex;align-items:center;gap:4px;color:#ccc;font-size:0.8rem;cursor:pointer;padding:5px 10px;border-radius:3px;border:1px solid transparent;transition:all 0.15s;white-space:nowrap;}
+.nav-fav-count:hover{color:#fff;border-color:var(--accent);}
+.fav-badge{background:var(--accent);color:var(--amazon-navy);border-radius:50%;width:18px;height:18px;font-size:0.65rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;}
+.cart-badge{background:var(--accent);color:var(--amazon-navy);border-radius:50%;width:18px;height:18px;font-size:0.65rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;}
+.btn-ai{background:var(--accent);color:var(--amazon-navy);border:none;padding:7px 14px;border-radius:3px;font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:700;cursor:pointer;transition:background 0.15s;white-space:nowrap;}
+.btn-ai:hover{background:var(--accent2);}
+.btn-auth{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:6px 12px;border-radius:3px;font-family:'Space Grotesk',sans-serif;font-size:0.78rem;cursor:pointer;transition:all 0.15s;}
+.btn-auth:hover{background:rgba(255,255,255,0.2);border-color:#fff;}
+.btn-auth.primary{background:var(--accent);border-color:var(--accent);color:var(--amazon-navy);font-weight:700;}
+.btn-auth.primary:hover{background:var(--accent2);}
+.user-avatar{width:32px;height:32px;border-radius:3px;background:rgba(255,153,0,0.2);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;cursor:pointer;color:var(--accent);transition:all 0.15s;}
+.user-avatar:hover{background:rgba(255,153,0,0.35);}
+.user-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:4px;min-width:200px;padding:6px;z-index:200;display:none;animation:slideDown 0.15s ease;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+.user-menu.open{display:block;}
+@keyframes slideDown{from{transform:translateY(-6px);opacity:0}to{transform:translateY(0);opacity:1}}
+.user-menu-item{padding:9px 12px;border-radius:3px;font-size:0.85rem;cursor:pointer;color:var(--text);transition:all 0.12s;display:flex;align-items:center;gap:8px;}
+.user-menu-item:hover{background:var(--tag-bg);}
+.user-menu-item.danger:hover{background:#FFF0EE;color:var(--error);}
+.user-menu-sep{height:1px;background:var(--border);margin:4px 0;}
+.nav-user-wrap{position:relative;}
+/* Amazon nav bottom bar */
+.nav-bottom{background:#232F3E;padding:4px 20px;display:flex;align-items:center;gap:2px;}
+.nav-bottom a{color:#ccc;font-size:0.78rem;padding:5px 10px;border-radius:3px;cursor:pointer;border:1px solid transparent;white-space:nowrap;text-decoration:none;}
+.nav-bottom a:hover{color:#fff;border-color:#fff;}
+.nav-bottom a.active{color:#fff;border-color:var(--accent);}
+.nb-github{margin-left:auto;color:var(--accent) !important;font-weight:600;}
+
+/* ── TABS (hidden, replaced by nav-bottom) ── */
+.page-tabs{display:none;}
+.page-tab{}
+
+/* ── PAGES ── */
+.page{display:none;}
+.page.active{display:block;}
+
+/* ── HERO ── */
+.hero{padding:80px 40px 50px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.hero-label{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.hero-label::before{content:'';display:inline-block;width:20px;height:2px;background:var(--accent);}
+.hero h1{font-size:clamp(2.2rem,3.5vw,3.4rem);font-weight:700;line-height:1.08;letter-spacing:-1.5px;}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-sub{margin-top:18px;color:var(--muted);font-size:0.95rem;line-height:1.65;max-width:420px;}
+.hero-cta{margin-top:32px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:12px 26px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+.btn-primary:hover{opacity:0.85;transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);padding:12px 22px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.88rem;cursor:pointer;transition:color 0.2s,border-color 0.2s;}
+.btn-ghost:hover{color:var(--text);border-color:var(--muted);}
+.ugx-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--ugx);padding:6px 14px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-top:12px;}
+.hero-stats{display:flex;flex-direction:column;gap:16px;}
+.stat-row{display:flex;gap:14px;}
+.stat-card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;transition:border-color 0.2s;}
+.stat-card:hover{border-color:var(--border2);}
+.stat-num{font-family:'Space Mono',monospace;font-size:1.7rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-label{font-size:0.75rem;color:var(--muted);margin-top:3px;}
+
+/* ── SECTION ── */
+.section-wrap{max-width:1200px;margin:0 auto;padding:0 40px 80px;}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
+.section-title{font-size:1.25rem;font-weight:700;letter-spacing:-0.3px;}
+.section-sub{font-size:0.82rem;color:var(--muted);margin-top:3px;}
+
+/* ── SEARCH & FILTERS ── */
+.search-filter-block{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:28px;}
+.search-wrap{position:relative;margin-bottom:18px;}
+.search-wrap input{width:100%;background:var(--tag-bg);border:1px solid var(--border);border-radius:12px;padding:13px 18px 13px 46px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.93rem;outline:none;transition:border-color 0.2s;}
+.search-wrap input:focus{border-color:var(--accent);}
+.search-wrap input::placeholder{color:var(--muted);}
+.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1rem;pointer-events:none;}
+.filters-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;}
+.filter-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.filter-label{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;white-space:nowrap;}
+.chip{padding:7px 16px;border-radius:100px;background:var(--tag-bg);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;cursor:pointer;transition:all 0.2s;font-family:'Space Grotesk',sans-serif;}
+.chip:hover{border-color:var(--accent);color:var(--text);}
+.chip.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.advanced-filters{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding-top:14px;border-top:1px solid var(--border);margin-top:4px;}
+.adv-filter{display:flex;flex-direction:column;gap:5px;}
+.adv-filter label{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;}
+.adv-filter select{background:var(--tag-bg);border:1px solid var(--border);color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.82rem;padding:8px 12px;border-radius:10px;cursor:pointer;outline:none;transition:border-color 0.2s;}
+.adv-filter select:focus{border-color:var(--accent);}
+.adv-filter select option{background:#1E1E2E;color:var(--text);}
+.price-range-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:12px;}
+.price-label{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;white-space:nowrap;}
+.price-slider-group{display:flex;align-items:center;gap:10px;flex:1;min-width:200px;}
+input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:4px;background:var(--border);border-radius:2px;outline:none;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;background:var(--accent);border-radius:50%;cursor:pointer;box-shadow:0 0 0 3px rgba(124,110,255,0.25);}
+.price-val{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--accent3);white-space:nowrap;min-width:100px;text-align:right;}
+.sort-wrap select{background:var(--tag-bg);border:1px solid var(--border);color:var(--muted);font-family:'Space Grotesk',sans-serif;font-size:0.8rem;padding:7px 28px 7px 12px;border-radius:100px;cursor:pointer;outline:none;transition:border-color 0.2s;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237A7A9A'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;background-color:var(--tag-bg);}
+.sort-wrap select:focus{border-color:var(--accent);}
+.sort-wrap select option{background:#1E1E2E;color:var(--text);}
+.results-count{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:18px;}
+.results-count span{color:var(--accent);}
+
+/* ── GRID ── */
+.phones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
+
+/* ── CARD ── */
+.phone-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s;cursor:pointer;position:relative;}
+.phone-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 40px rgba(124,110,255,0.12);}
+.card-badge{position:absolute;top:14px;left:14px;background:var(--accent);color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-family:'Space Mono',monospace;z-index:2;}
+.card-badge.hot{background:var(--accent2);}
+.card-badge.deal{background:var(--ugx);color:#000;}
+.card-visual{height:190px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.card-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 70%,rgba(124,110,255,0.15),transparent 70%);}
+.card-img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0;}
+.card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,15,0.6),transparent);z-index:1;}
+.phone-svg{width:75px;filter:drop-shadow(0 8px 24px rgba(124,110,255,0.3));position:relative;z-index:1;transition:transform 0.3s;}
+.phone-card:hover .phone-svg{transform:scale(1.06) translateY(-3px);}
+.card-body{padding:20px;}
+.card-brand{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:3px;}
+.card-name{font-size:1.1rem;font-weight:700;letter-spacing:-0.3px;margin-bottom:2px;}
+.card-price-ugx{/* USD price */font-family:'Space Mono',monospace;font-size:0.88rem;color:var(--ugx);font-weight:700;margin-bottom:2px;}
+.card-price{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--muted);margin-bottom:14px;}
+.card-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
+.spec-key{font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:1px;}
+.spec-val{font-size:0.82rem;font-weight:600;color:var(--text);}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
+.tag{background:var(--tag-bg);border:1px solid var(--border);color:var(--muted);font-size:0.68rem;padding:3px 9px;border-radius:100px;}
+.tag.network{border-color:rgba(74,222,128,0.3);color:var(--success);}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);}
+.rating{display:flex;align-items:center;gap:5px;}
+.stars{color:#FFD700;font-size:0.82rem;}
+.rating-num{font-size:0.78rem;color:var(--muted);}
+.review-count{font-size:0.68rem;color:var(--muted);}
+.view-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:100px;font-size:0.76rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.2s;}
+.view-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+.fav-btn{position:absolute;top:12px;right:12px;background:rgba(10,10,15,0.7);border:1px solid var(--border);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.9rem;z-index:2;transition:all 0.2s;backdrop-filter:blur(4px);}
+.fav-btn:hover{border-color:var(--accent2);transform:scale(1.1);}
+.fav-btn.active{background:rgba(255,110,155,0.15);border-color:var(--accent2);}
+.compare-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 12px;border-radius:100px;font-size:0.72rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.2s;}
+.compare-btn:hover{border-color:var(--accent);color:var(--text);}
+.compare-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.has-image-badge{position:absolute;bottom:8px;left:8px;background:rgba(74,222,128,0.15);border:1px solid var(--success);color:var(--success);font-size:0.58rem;font-weight:700;padding:3px 7px;border-radius:100px;font-family:'Space Mono',monospace;z-index:3;letter-spacing:1px;}
+.whatsapp-btn{display:flex;align-items:center;gap:6px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);color:#25d366;padding:7px 14px;border-radius:100px;font-size:0.76rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.2s;text-decoration:none;}
+.whatsapp-btn:hover{background:rgba(37,211,102,0.2);}
+.add-cart-btn{display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:100px;font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:opacity 0.2s;}
+.add-cart-btn:hover{opacity:0.85;}
+
+/* ── PRICE DROP BADGE ── */
+.price-drop{position:absolute;bottom:8px;right:8px;background:rgba(74,222,128,0.15);border:1px solid var(--success);color:var(--success);font-size:0.6rem;font-weight:700;padding:3px 8px;border-radius:100px;font-family:'Space Mono',monospace;z-index:3;}
+
+/* ── NO RESULTS ── */
+#noResults{display:none;text-align:center;padding:80px 20px;color:var(--muted);}
+#noResults .nr-icon{font-size:3rem;display:block;margin-bottom:16px;}
+#noResults .nr-title{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:8px;}
+
+/* ── MODALS ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:24px;max-width:660px;width:100%;max-height:92vh;overflow-y:auto;animation:slideUp 0.3s ease;}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;padding:26px 26px 0;}
+.modal-close{width:34px;height:34px;border-radius:50%;background:var(--tag-bg);border:1px solid var(--border);color:var(--muted);font-size:0.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;}
+.modal-close:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.modal-visual{height:230px;margin:18px 26px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.modal-img-main{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);}
+.modal-body{padding:0 26px 26px;}
+.modal-brand{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:3px;}
+.modal-name{font-size:1.5rem;font-weight:700;letter-spacing:-0.5px;}
+.modal-price-ugx{/* USD price */font-family:'Space Mono',monospace;font-size:1.1rem;color:var(--ugx);font-weight:700;margin:4px 0 2px;}
+.modal-price{font-family:'Space Mono',monospace;font-size:0.85rem;color:var(--muted);margin-bottom:18px;}
+.modal-section-title{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;margin-top:22px;}
+.modal-specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.modal-spec{background:var(--tag-bg);border:1px solid var(--border);border-radius:12px;padding:12px 14px;}
+.modal-spec-key{font-size:0.65rem;color:var(--muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.8px;}
+.modal-spec-val{font-size:0.88rem;font-weight:600;}
+.modal-desc{font-size:0.88rem;line-height:1.65;color:var(--muted);}
+.thumb-gallery{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap;}
+.thumb{width:60px;height:60px;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid var(--border);transition:border-color 0.2s;flex-shrink:0;}
+.thumb:hover,.thumb.active{border-color:var(--accent);}
+.thumb img{width:100%;height:100%;object-fit:cover;}
+.thumb-placeholder{width:100%;height:100%;background:var(--tag-bg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--border);}
+
+/* ── REVIEWS ── */
+.reviews-section{margin-top:24px;}
+.review-form{background:var(--tag-bg);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:20px;}
+.review-form textarea{width:100%;background:transparent;border:1px solid var(--border);border-radius:10px;padding:11px 14px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.87rem;outline:none;resize:none;min-height:80px;transition:border-color 0.2s;}
+.review-form textarea:focus{border-color:var(--accent);}
+.star-picker{display:flex;gap:4px;margin-bottom:10px;cursor:pointer;}
+.star-picker span{font-size:1.3rem;transition:transform 0.1s;}
+.star-picker span:hover{transform:scale(1.2);}
+.review-submit{background:var(--accent);color:#fff;border:none;padding:9px 20px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;}
+.review-submit:hover{opacity:0.85;}
+.review-item{padding:16px 0;border-bottom:1px solid var(--border);}
+.review-item:last-child{border-bottom:none;}
+.review-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
+.review-author{font-weight:600;font-size:0.88rem;}
+.review-date{font-size:0.72rem;color:var(--muted);}
+.review-stars{color:#FFD700;font-size:0.85rem;margin-bottom:6px;}
+.review-text{font-size:0.85rem;color:var(--muted);line-height:1.6;}
+.review-actions{display:flex;gap:10px;margin-top:8px;}
+.review-vote{background:none;border:1px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:100px;font-size:0.72rem;cursor:pointer;transition:all 0.2s;font-family:'Space Grotesk',sans-serif;}
+.review-vote:hover{border-color:var(--accent);color:var(--text);}
+.review-vote.liked{background:rgba(124,110,255,0.1);border-color:var(--accent);color:var(--accent);}
+.verified-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);color:var(--success);font-size:0.65rem;padding:2px 8px;border-radius:100px;font-family:'Space Mono',monospace;}
+
+/* ── PRICE HISTORY ── */
+.price-history-wrap{background:var(--tag-bg);border:1px solid var(--border);border-radius:14px;padding:18px;margin-top:16px;}
+.price-history-chart{height:80px;position:relative;margin:12px 0;}
+.price-chart-svg{width:100%;height:100%;}
+.price-alert-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.lowest-price{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--success);}
+.price-alert-btn{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);color:var(--success);padding:7px 14px;border-radius:100px;font-size:0.78rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.2s;}
+.price-alert-btn:hover{background:rgba(74,222,128,0.2);}
+.price-alert-btn.active{background:rgba(74,222,128,0.2);}
+
+/* ── COMPARE ── */
+.compare-bar{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:12px 40px;display:flex;align-items:center;gap:14px;z-index:150;transform:translateY(100%);transition:transform 0.3s ease;}
+.compare-bar.visible{transform:translateY(0);}
+.compare-bar-label{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;}
+.compare-items{display:flex;gap:8px;flex:1;flex-wrap:wrap;}
+.compare-chip{background:var(--tag-bg);border:1px solid var(--accent);color:var(--text);padding:5px 12px;border-radius:100px;font-size:0.8rem;display:flex;align-items:center;gap:7px;}
+.compare-chip button{background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.8rem;padding:0;}
+.compare-chip button:hover{color:var(--accent2);}
+.btn-compare-go{background:var(--accent);color:#fff;border:none;padding:9px 20px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.83rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;}
+.btn-compare-go:hover{opacity:0.85;}
+.btn-compare-clear{background:transparent;color:var(--muted);border:1px solid var(--border);padding:9px 16px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.8rem;cursor:pointer;transition:all 0.2s;}
+.compare-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:14px;}
+.compare-col{background:var(--tag-bg);border:1px solid var(--border);border-radius:14px;padding:16px;}
+.compare-col-brand{font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;}
+.compare-col-name{font-size:0.95rem;font-weight:700;margin:3px 0 10px;}
+.compare-row{padding:7px 0;border-bottom:1px solid var(--border);}
+.compare-row:last-child{border-bottom:none;}
+.compare-row-key{font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px;}
+.compare-row-val{font-size:0.82rem;font-weight:600;}
+.compare-row-val.best{color:var(--success);}
+.compare-ai-summary{background:linear-gradient(135deg,rgba(124,110,255,0.1),rgba(255,110,155,0.05));border:1px solid var(--accent);border-radius:14px;padding:18px;margin-top:18px;}
+.compare-ai-title{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
+.compare-ai-text{font-size:0.87rem;line-height:1.7;color:var(--text);}
+
+/* ── AI MODAL ── */
+.ai-modal-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;max-width:620px;width:100%;max-height:90vh;overflow-y:auto;animation:slideUp 0.3s ease;}
+.ai-header{padding:26px 26px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.ai-title{font-size:1.15rem;font-weight:700;display:flex;align-items:center;gap:10px;}
+.ai-badge{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:0.58rem;font-weight:700;padding:3px 8px;border-radius:100px;font-family:'Space Mono',monospace;letter-spacing:1px;}
+.ai-body{padding:22px 26px 26px;}
+.ai-question{font-size:0.88rem;color:var(--muted);margin-bottom:18px;line-height:1.55;}
+.ai-quick-picks{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.ai-quick{background:var(--tag-bg);border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:100px;font-size:0.78rem;cursor:pointer;transition:all 0.2s;}
+.ai-quick:hover{border-color:var(--accent);color:var(--text);}
+.ai-textarea{width:100%;background:var(--tag-bg);border:1px solid var(--border);border-radius:12px;padding:12px 14px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.9rem;outline:none;resize:none;min-height:90px;transition:border-color 0.2s;margin-bottom:14px;}
+.ai-textarea:focus{border-color:var(--accent);}
+.ai-submit{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:13px;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:0.93rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.ai-submit:hover{opacity:0.88;}
+.ai-submit:disabled{opacity:0.5;cursor:not-allowed;}
+.ai-result{margin-top:18px;background:var(--tag-bg);border:1px solid var(--border);border-radius:14px;padding:18px;display:none;}
+.ai-result.visible{display:block;}
+.ai-result-title{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
+.ai-result-text{font-size:0.88rem;line-height:1.72;color:var(--text);}
+.ai-typing::after{content:'▋';animation:blink 0.7s infinite;color:var(--accent);}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ── AUTH MODAL ── */
+.auth-modal-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;max-width:440px;width:100%;animation:slideUp 0.3s ease;}
+.auth-header{padding:28px 28px 0;text-align:center;}
+.auth-logo{font-family:'Space Mono',monospace;font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;}
+.auth-title{font-size:1.3rem;font-weight:700;margin-bottom:6px;}
+.auth-sub{font-size:0.85rem;color:var(--muted);line-height:1.5;}
+.auth-body{padding:24px 28px 28px;}
+.auth-tabs{display:flex;gap:0;background:var(--tag-bg);border-radius:10px;padding:4px;margin-bottom:22px;}
+.auth-tab{flex:1;padding:8px;text-align:center;border-radius:8px;font-size:0.85rem;cursor:pointer;color:var(--muted);transition:all 0.2s;}
+.auth-tab.active{background:var(--accent);color:#fff;}
+.auth-form{display:flex;flex-direction:column;gap:14px;}
+.auth-input-group{display:flex;flex-direction:column;gap:5px;}
+.auth-input-group label{font-size:0.78rem;color:var(--muted);font-weight:500;}
+.auth-input{background:var(--tag-bg);border:1px solid var(--border);border-radius:10px;padding:11px 14px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;width:100%;}
+.auth-input:focus{border-color:var(--accent);}
+.auth-submit{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:13px;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;width:100%;}
+.auth-submit:hover{opacity:0.88;}
+.auth-divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:0.78rem;}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── CART ── */
+.cart-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:300;justify-content:flex-end;}
+.cart-overlay.open{display:flex;}
+.cart-panel{background:var(--surface);border-left:1px solid var(--border);width:100%;max-width:420px;height:100%;overflow-y:auto;animation:slideRight 0.3s ease;display:flex;flex-direction:column;}
+@keyframes slideRight{from{transform:translateX(100%)}to{transform:translateX(0)}}
+.cart-header{padding:24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.cart-title{font-size:1.15rem;font-weight:700;}
+.cart-items{flex:1;padding:20px;display:flex;flex-direction:column;gap:14px;}
+.cart-item{background:var(--tag-bg);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start;}
+.cart-item-img{width:60px;height:60px;background:var(--surface);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+.cart-item-info{flex:1;}
+.cart-item-name{font-weight:600;font-size:0.9rem;margin-bottom:3px;}
+.cart-item-price{font-family:'Space Mono',monospace;font-size:0.82rem;color:var(--ugx);}
+.cart-item-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.85rem;transition:color 0.2s;}
+.cart-item-remove:hover{color:var(--error);}
+.cart-footer{padding:20px;border-top:1px solid var(--border);}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.cart-total-label{font-size:0.85rem;color:var(--muted);}
+.cart-total-val{font-family:'Space Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--ugx);}
+.checkout-btn{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:14px;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;margin-bottom:10px;}
+.checkout-btn:hover{opacity:0.88;}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted);}
+.cart-empty-icon{font-size:3rem;display:block;margin-bottom:14px;}
+.cart-badge{background:var(--accent2);color:#fff;border-radius:50%;width:18px;height:18px;font-size:0.62rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-left:4px;}
+
+/* ── PAYMENT ── */
+.payment-modal-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;max-width:460px;width:100%;animation:slideUp 0.3s ease;}
+.payment-header{padding:26px 26px 0;border-bottom:none;}
+.payment-title{font-size:1.2rem;font-weight:700;margin-bottom:4px;}
+.payment-sub{font-size:0.85rem;color:var(--muted);}
+.payment-body{padding:22px 26px 26px;}
+.payment-methods{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.payment-method{background:var(--tag-bg);border:2px solid var(--border);border-radius:14px;padding:16px;cursor:pointer;transition:all 0.2s;text-align:center;}
+.payment-method:hover{border-color:var(--accent);}
+.payment-method.selected{border-color:var(--accent);background:rgba(124,110,255,0.05);}
+.payment-method-icon{font-size:1.8rem;display:block;margin-bottom:6px;}
+.payment-method-name{font-size:0.82rem;font-weight:600;margin-bottom:2px;}
+.payment-method-sub{font-size:0.7rem;color:var(--muted);}
+.payment-mtn{border-color:rgba(255,200,0,0.3);}
+.payment-mtn.selected,.payment-mtn:hover{border-color:#FFCC00;background:rgba(255,204,0,0.05);}
+.payment-airtel{border-color:rgba(220,50,50,0.3);}
+.payment-airtel.selected,.payment-airtel:hover{border-color:#DC3232;background:rgba(220,50,50,0.05);}
+.payment-phone-input{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+.payment-phone-input label{font-size:0.78rem;color:var(--muted);}
+.payment-phone-input input{background:var(--tag-bg);border:1px solid var(--border);border-radius:10px;padding:11px 14px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;}
+.payment-phone-input input:focus{border-color:var(--accent);}
+.payment-total{background:var(--tag-bg);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+.pay-btn{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:14px;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;}
+.pay-btn:hover{opacity:0.88;}
+
+/* ── RECENTLY VIEWED ── */
+.recently-viewed{max-width:1200px;margin:0 auto;padding:0 40px 50px;}
+.rv-scroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
+.rv-card{flex-shrink:0;width:160px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;cursor:pointer;transition:border-color 0.2s;}
+.rv-card:hover{border-color:var(--accent);}
+.rv-card-brand{font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;margin-bottom:2px;}
+.rv-card-name{font-size:0.82rem;font-weight:600;margin-bottom:4px;}
+.rv-card-price{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--ugx);}
+
+/* ── ADMIN DASHBOARD ── */
+.admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:32px;}
+.admin-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;}
+.admin-card-num{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.admin-card-label{font-size:0.8rem;color:var(--muted);margin-top:4px;}
+.admin-card-trend{font-size:0.75rem;color:var(--success);margin-top:6px;}
+.chart-bar-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;margin-bottom:20px;}
+.chart-bar-title{font-size:0.88rem;font-weight:600;margin-bottom:18px;}
+.bar-item{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.bar-label{font-size:0.78rem;color:var(--muted);width:120px;flex-shrink:0;}
+.bar-track{flex:1;height:8px;background:var(--tag-bg);border-radius:4px;overflow:hidden;}
+.bar-fill{height:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:4px;transition:width 0.8s ease;}
+.bar-val{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--muted);width:40px;text-align:right;}
+.admin-table{width:100%;border-collapse:collapse;}
+.admin-table th{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.admin-table td{padding:12px 14px;font-size:0.85rem;border-bottom:1px solid var(--border);color:var(--muted);}
+.admin-table tr:hover td{background:var(--tag-bg);color:var(--text);}
+.admin-table tr:last-child td{border-bottom:none;}
+
+/* ── IMAGE MANAGER ── */
+.admin-section{max-width:1200px;margin:0 auto;padding:0 40px 80px;}
+.admin-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:14px;}
+.admin-title-block{display:flex;align-items:center;gap:12px;}
+.admin-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.admin-title{font-size:1.3rem;font-weight:700;letter-spacing:-0.5px;}
+.admin-subtitle{font-size:0.8rem;color:var(--muted);margin-top:2px;}
+.img-stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+.img-stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px;}
+.img-stat-num{font-family:'Space Mono',monospace;font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.img-stat-label{font-size:0.72rem;color:var(--muted);margin-top:3px;}
+.img-controls{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;align-items:center;}
+.img-search-wrap{position:relative;flex:1;min-width:200px;}
+.img-search{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:9px 14px 9px 38px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.85rem;outline:none;transition:border-color 0.2s;width:100%;}
+.img-search:focus{border-color:var(--accent);}
+.img-search::placeholder{color:var(--muted);}
+.img-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.88rem;pointer-events:none;}
+.img-filter-chips{display:flex;gap:7px;flex-wrap:wrap;}
+.img-chip{padding:6px 12px;border-radius:100px;background:var(--tag-bg);border:1px solid var(--border);color:var(--muted);font-size:0.76rem;cursor:pointer;transition:all 0.2s;font-family:'Space Grotesk',sans-serif;}
+.img-chip:hover{border-color:var(--accent);color:var(--text);}
+.img-chip.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.img-catalog{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;}
+.img-catalog-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s;}
+.img-catalog-item:hover{border-color:var(--border2);}
+.img-catalog-thumb{position:relative;height:140px;overflow:hidden;cursor:pointer;}
+.img-catalog-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s;}
+.img-catalog-item:hover .img-catalog-thumb img{transform:scale(1.04);}
+.img-catalog-actions{position:absolute;inset:0;background:rgba(10,10,15,0.7);display:flex;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity 0.2s;}
+.img-catalog-thumb:hover .img-catalog-actions{opacity:1;}
+.img-action-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.2s;}
+.img-action-btn:hover{border-color:var(--accent);color:var(--text);}
+.img-action-delete:hover{border-color:var(--error);color:var(--error);}
+.img-type-badge{position:absolute;top:8px;left:8px;background:rgba(10,10,15,0.75);border:1px solid var(--border);color:var(--muted);font-size:0.6rem;padding:3px 8px;border-radius:100px;font-family:'Space Mono',monospace;letter-spacing:1px;text-transform:uppercase;}
+.img-catalog-info{padding:12px;}
+.img-catalog-brand{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:1.5px;color:var(--accent);text-transform:uppercase;margin-bottom:2px;}
+.img-catalog-phone{font-size:0.85rem;font-weight:600;margin-bottom:5px;}
+.img-catalog-meta{display:flex;justify-content:space-between;align-items:center;}
+.img-catalog-size{font-size:0.7rem;color:var(--muted);}
+.img-catalog-date{font-size:0.68rem;color:var(--muted);}
+.img-empty{text-align:center;padding:60px 20px;color:var(--muted);}
+.img-empty-icon{font-size:2.5rem;display:block;margin-bottom:12px;}
+.img-empty-title{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:6px;}
+.img-empty-sub{font-size:0.82rem;line-height:1.6;}
+.bulk-toolbar{background:var(--accent);color:#fff;padding:12px 20px;border-radius:12px;margin-bottom:18px;display:none;align-items:center;justify-content:space-between;gap:12px;}
+.bulk-toolbar.visible{display:flex;}
+.bulk-count{font-size:0.85rem;font-weight:600;}
+.btn-bulk-delete{background:rgba(255,77,109,0.2);border:1px solid rgba(255,77,109,0.4);color:#fff;padding:7px 16px;border-radius:100px;font-size:0.8rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;}
+.btn-bulk-cancel{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:7px 14px;border-radius:100px;font-size:0.8rem;cursor:pointer;font-family:'Space Grotesk',sans-serif;}
+.img-select-check{position:absolute;top:8px;right:8px;z-index:5;}
+.img-select-check input{width:18px;height:18px;cursor:pointer;accent-color:var(--accent);}
+.admin-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.btn-upload{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:9px 18px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.83rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;display:flex;align-items:center;gap:6px;}
+.btn-upload:hover{opacity:0.85;}
+.btn-bulk{background:transparent;border:1px solid var(--border);color:var(--muted);padding:9px 16px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.8rem;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
+.btn-bulk:hover{border-color:var(--accent);color:var(--text);}
+
+/* ── UPLOAD MODAL ── */
+.upload-modal-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;animation:slideUp 0.3s ease;}
+.upload-header{padding:24px 24px 0;display:flex;align-items:center;justify-content:space-between;}
+.upload-title{font-size:1.1rem;font-weight:700;display:flex;align-items:center;gap:10px;}
+.upload-body{padding:20px 24px 24px;}
+.drop-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:32px 20px;text-align:center;cursor:pointer;transition:all 0.2s;position:relative;background:var(--tag-bg);}
+.drop-zone:hover,.drop-zone.drag-over{border-color:var(--accent);background:rgba(124,110,255,0.05);}
+.drop-zone-icon{font-size:2rem;display:block;margin-bottom:10px;}
+.drop-zone-title{font-size:0.92rem;font-weight:600;margin-bottom:6px;}
+.drop-zone-sub{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+.drop-zone-formats{display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap;}
+.format-badge{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-size:0.68rem;padding:3px 10px;border-radius:100px;font-family:'Space Mono',monospace;}
+#fileInput{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.preview-area{margin-top:16px;display:none;}
+.preview-area.visible{display:block;}
+.preview-title{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
+.preview-grid{display:flex;gap:8px;flex-wrap:wrap;}
+.preview-item{position:relative;width:72px;height:72px;}
+.preview-item img{width:100%;height:100%;object-fit:cover;border-radius:8px;border:1px solid var(--border);}
+.preview-remove{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--error);border:none;color:#fff;font-size:0.7rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.upload-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
+.form-group{display:flex;flex-direction:column;gap:5px;}
+.form-group.full-width{grid-column:1/-1;}
+.form-label{font-size:0.75rem;color:var(--muted);font-weight:500;}
+.form-select{background:var(--tag-bg);border:1px solid var(--border);color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.88rem;padding:9px 12px;border-radius:10px;cursor:pointer;outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
+.form-select:focus{border-color:var(--accent);}
+.form-select option{background:#1E1E2E;color:var(--text);}
+.img-type-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.img-type-btn{background:var(--tag-bg);border:1px solid var(--border);border-radius:10px;padding:10px 6px;text-align:center;cursor:pointer;transition:all 0.2s;}
+.img-type-btn:hover{border-color:var(--accent);}
+.img-type-btn.selected{background:rgba(124,110,255,0.1);border-color:var(--accent);}
+.img-type-icon{font-size:1.2rem;display:block;margin-bottom:4px;}
+.img-type-label{font-size:0.7rem;color:var(--muted);}
+.img-type-btn.selected .img-type-label{color:var(--accent);}
+.watermark-toggle{display:flex;align-items:center;justify-content:space-between;background:var(--tag-bg);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-top:16px;}
+.watermark-label{display:flex;align-items:center;gap:10px;}
+.watermark-label-text{font-size:0.85rem;font-weight:500;}
+.watermark-label-sub{font-size:0.72rem;color:var(--muted);margin-top:2px;}
+.toggle-switch{position:relative;width:44px;height:24px;}
+.toggle-switch input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;inset:0;background:var(--border);border-radius:24px;cursor:pointer;transition:background 0.2s;}
+.toggle-switch input:checked+.toggle-slider{background:var(--accent);}
+.toggle-slider::before{content:'';position:absolute;left:2px;top:50%;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;background:#fff;transition:transform 0.2s;}
+.toggle-switch input:checked+.toggle-slider::before{transform:translateY(-50%) translateX(20px);}
+.upload-progress{background:var(--tag-bg);border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:16px;display:none;}
+.upload-progress.visible{display:block;}
+.progress-label{display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.8rem;color:var(--muted);}
+.progress-bar-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:12px;}
+.progress-bar-fill{height:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:3px;transition:width 0.4s ease;width:0%;}
+.progress-file{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.8rem;}
+.progress-file:last-child{border-bottom:none;}
+.progress-file-icon{font-size:0.9rem;}
+.progress-file-name{flex:1;color:var(--muted);}
+.progress-file-status{font-size:0.72rem;color:var(--muted);}
+.status-done{color:var(--success)!important;}
+.upload-message{border-radius:10px;padding:10px 14px;font-size:0.83rem;margin-bottom:14px;display:none;}
+.upload-message.visible{display:block;}
+.upload-message.error{background:rgba(255,77,109,0.1);border:1px solid rgba(255,77,109,0.3);color:var(--error);}
+.upload-message.success{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);color:var(--success);}
+.upload-submit{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:13px;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:0.93rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;margin-top:18px;}
+.upload-submit:hover{opacity:0.88;}
+.upload-submit:disabled{opacity:0.5;cursor:not-allowed;}
+
+/* ── LIGHTBOX ── */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:400;align-items:center;justify-content:center;}
+.lightbox.open{display:flex;}
+.lightbox-inner{position:relative;max-width:90vw;max-height:90vh;}
+.lightbox-close{position:fixed;top:20px;right:20px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.lightbox-close:hover{background:rgba(255,255,255,0.2);}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.lightbox-nav:hover{background:rgba(255,255,255,0.2);}
+.lightbox-prev{left:20px;}
+.lightbox-next{right:20px;}
+#lightboxImg{max-width:85vw;max-height:80vh;object-fit:contain;border-radius:8px;}
+.lightbox-info{text-align:center;color:rgba(255,255,255,0.6);font-size:0.8rem;margin-top:12px;}
+
+/* ── KAMPALA SECTION ── */
+.kampala-section{background:linear-gradient(135deg,rgba(245,158,11,0.05),rgba(249,115,22,0.03));border:1px solid rgba(245,158,11,0.15);border-radius:20px;padding:28px;margin-bottom:40px;}
+.kampala-title{font-size:1.1rem;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.kampala-sub{font-size:0.85rem;color:var(--muted);margin-bottom:20px;}
+.shops-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.shop-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px;}
+.shop-name{font-weight:600;font-size:0.9rem;margin-bottom:4px;}
+.shop-area{font-size:0.75rem;color:var(--muted);margin-bottom:8px;}
+.shop-wa{display:inline-flex;align-items:center;gap:5px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);color:#25d366;padding:5px 12px;border-radius:100px;font-size:0.72rem;cursor:pointer;text-decoration:none;transition:background 0.2s;}
+.shop-wa:hover{background:rgba(37,211,102,0.2);}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface);border:1px solid var(--border);color:var(--text);padding:12px 22px;border-radius:100px;font-size:0.85rem;opacity:0;pointer-events:none;transition:all 0.3s;z-index:500;backdrop-filter:blur(8px);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ── ADMIN EDIT MODE ── */
+#editModeFAB{position:fixed;bottom:28px;right:24px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+#editToggleBtn{background:linear-gradient(135deg,#1428A0,#007AFF);color:#fff;border:none;padding:13px 20px;border-radius:50px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;transition:all 0.2s;white-space:nowrap;}
+#editToggleBtn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.4);}
+#editToggleBtn.active{background:linear-gradient(135deg,#C40000,#FF4D6D);}
+#editSaveBtn{background:linear-gradient(135deg,#007600,#22c55e);color:#fff;border:none;padding:11px 20px;border-radius:50px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:none;align-items:center;gap:8px;transition:all 0.2s;white-space:nowrap;}
+#editSaveBtn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.35);}
+#editSaveBtn.visible{display:flex;}
+#editClearBtn{background:rgba(196,0,0,0.15);color:#C40000;border:1px solid rgba(196,0,0,0.3);padding:8px 16px;border-radius:50px;font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;display:none;transition:all 0.2s;white-space:nowrap;}
+#editClearBtn:hover{background:rgba(196,0,0,0.25);}
+#editClearBtn.visible{display:block;}
+#editModeBanner{position:fixed;top:0;left:0;right:0;z-index:9998;background:linear-gradient(90deg,#1428A0,#007AFF);color:#fff;text-align:center;padding:7px 14px;font-size:0.8rem;font-weight:600;display:none;letter-spacing:0.3px;}
+#editModeBanner.visible{display:block;}
+body.edit-mode [data-editable]{outline:2px dashed rgba(0,122,255,0.5)!important;border-radius:4px;cursor:text;transition:outline 0.15s,background 0.15s;}
+body.edit-mode [data-editable]:hover{outline:2px solid #007AFF!important;background:rgba(0,122,255,0.05)!important;}
+body.edit-mode [data-editable]:focus{outline:2px solid #007AFF!important;background:rgba(0,122,255,0.08)!important;box-shadow:0 0 0 4px rgba(0,122,255,0.12);}
+.edit-mode-indicator{position:absolute;top:-18px;left:0;font-size:0.6rem;color:#007AFF;font-weight:700;background:#fff;padding:1px 5px;border-radius:3px;pointer-events:none;opacity:0;transition:opacity 0.15s;}
+body.edit-mode [data-editable]:hover .edit-mode-indicator{opacity:1;}
+
+/* ── PHONE SPEC EDITOR ── */
+.spec-editor-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:28px;}
+.spec-editor-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.spec-editor-title{font-size:0.95rem;font-weight:700;display:flex;align-items:center;gap:8px;}
+.spec-editor-actions{display:flex;gap:8px;align-items:center;}
+.btn-spec-save{background:linear-gradient(135deg,#007600,#22c55e);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;}
+.btn-spec-save:hover{opacity:0.88;}
+.btn-spec-reset{background:transparent;color:var(--error);border:1px solid rgba(196,0,0,0.3);padding:8px 14px;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.8rem;cursor:pointer;transition:all 0.2s;}
+.btn-spec-reset:hover{background:rgba(196,0,0,0.07);}
+.btn-add-phone{background:var(--accent);color:var(--amazon-navy);border:none;padding:8px 16px;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;}
+.btn-add-phone:hover{opacity:0.88;}
+.spec-table-scroll{overflow-x:auto;}
+.spec-table{width:100%;border-collapse:collapse;font-size:0.82rem;}
+.spec-table th{background:var(--tag-bg);padding:10px 12px;text-align:left;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);white-space:nowrap;}
+.spec-table td{padding:8px 8px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.spec-table tr:last-child td{border-bottom:none;}
+.spec-table tr:hover td{background:rgba(255,153,0,0.03);}
+.spec-input{background:var(--tag-bg);border:1px solid var(--border);border-radius:6px;padding:5px 8px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.82rem;width:100%;min-width:80px;outline:none;transition:border-color 0.15s;}
+.spec-input:focus{border-color:var(--accent);}
+.spec-input.narrow{min-width:56px;max-width:80px;}
+.spec-input.medium{min-width:90px;max-width:130px;}
+.spec-input.wide{min-width:130px;}
+.spec-select{background:var(--tag-bg);border:1px solid var(--border);border-radius:6px;padding:5px 8px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;transition:border-color 0.15s;}
+.spec-select:focus{border-color:var(--accent);}
+.spec-del-btn{background:rgba(196,0,0,0.1);border:1px solid rgba(196,0,0,0.2);color:var(--error);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:0.85rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;}
+.spec-del-btn:hover{background:rgba(196,0,0,0.2);}
+.spec-brand-apple{color:#007AFF;font-weight:700;font-size:0.68rem;}
+.spec-brand-samsung{color:#1428A0;font-weight:700;font-size:0.68rem;}
+.spec-unsaved-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;display:inline-block;margin-left:6px;animation:pulse 1.2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* ── FOOTER ── */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.78rem;color:var(--muted);}
+footer a{color:var(--muted);text-decoration:none;}
+footer a:hover{color:var(--text);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  nav{padding:12px 16px;}
+  .nav-links{display:none;}
+  .page-tabs{padding:0 16px;overflow-x:auto;}
+  .hero{padding:50px 16px 36px;grid-template-columns:1fr;gap:32px;}
+  .hero-stats{display:none;}
+  .section-wrap,.admin-section,.recently-viewed{padding:0 16px 50px;}
+  .search-filter-block{padding:16px;}
+  .advanced-filters{grid-template-columns:1fr 1fr;}
+  .phones-grid{grid-template-columns:1fr;}
+  .img-stats-bar{grid-template-columns:1fr 1fr;}
+  .compare-bar{padding:12px 16px;}
+  footer{padding:16px;}
+  .admin-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .advanced-filters{grid-template-columns:1fr;}
+  .admin-grid{grid-template-columns:1fr;}
+  .modal-specs-grid{grid-template-columns:1fr;}
+  .compare-grid{grid-template-columns:1fr;}
+  .payment-methods{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+<div class="brand-banner"></div>
+  <div class="logo" onclick="showPage('catalog')"> <span style="color:#fff;font-size:1rem"></span>iSam<span style="color:#007AFF">Store</span></div>
+  <div class="nav-links">
+    <a onclick="showPage('catalog')" class="active" id="nav-catalog">Catalog</a>
+    <a onclick="showPage('compare-page')" id="nav-compare-page">Compare</a>
+    
+    <a onclick="showPage('admin')" id="nav-admin">Admin</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-fav-count" onclick="setFilter('favourites',null)">❤️ <span class="fav-badge" id="favCount">0</span></div>
+    <div class="nav-fav-count" onclick="openCart()" style="gap:4px;">🛒 <span class="cart-badge" id="cartCount">0</span></div>
+    <button class="btn-ai" onclick="openAIModal()">✦ AI Finder</button>
+    <div class="nav-user-wrap" id="navUserWrap">
+      <button class="btn-auth" onclick="openAuthModal('login')" id="loginBtn">Sign in</button>
+      <button class="btn-auth primary" onclick="openAuthModal('signup')" id="signupBtn">Join free</button>
+      <div class="user-avatar" id="userAvatar" style="display:none" onclick="toggleUserMenu()"></div>
+      <div class="user-menu" id="userMenu">
+        <div class="user-menu-item" onclick="showPage('catalog');toggleUserMenu()">📱 My Saved Phones</div>
+        <div class="user-menu-item" onclick="toggleUserMenu()">🔔 Price Alerts</div>
+        <div class="user-menu-sep"></div>
+        <div class="user-menu-item danger" onclick="logout()">Sign out</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════ TABS ══════════ -->
+<div class="page-tabs">
+  <div class="page-tab active" onclick="showPage('catalog')" id="tab-catalog">All Phones</div>
+  <div class="page-tab" onclick="showPage('compare-page')" id="tab-compare-page">⚖️ Compare</div>
+  
+  <div class="page-tab" onclick="showPage('admin')" id="tab-admin">⚙️ Admin</div>
+</div>
+
+<!-- ══════════ PAGE: CATALOG ══════════ -->
+<div class="page active" id="page-catalog">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="hero-label">iPhone &amp; Samsung — One Store</div>
+      <h1>Find Your Perfect<br><span>iPhone or Galaxy</span></h1>
+      <p class="hero-sub">Compare Apple iPhone vs Samsung Galaxy side-by-side. Track price drops, read real reviews, and get the best USD deal — all in one place.</p>
+      <div class="ugx-badge" style="display:flex;gap:12px;align-items:center;"><span style="color:#007AFF;font-weight:700;">🍎 iPhone</span><span style="opacity:0.4">|</span><span style="color:#1428A0;font-weight:700;">🔷 Samsung Galaxy</span><span style="opacity:0.4">·</span><span>All prices in USD</span></div>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="document.getElementById('mainSearch').scrollIntoView({behavior:'smooth'})">Browse Phones</button>
+        <button class="btn-ghost" onclick="openAIModal()">✦ AI Recommendation</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-row">
+        <div class="stat-card"><div class="stat-num" id="statPhones">18</div><div class="stat-label">Phones catalogued</div></div>
+        <div class="stat-card"><div class="stat-num" id="statImgCount">0</div><div class="stat-label">Real photos</div></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card"><div class="stat-num">Daily</div><div class="stat-label">Price updates in USD</div></div>
+        <div class="stat-card"><div class="stat-num">Free</div><div class="stat-label">Price drop alerts</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECENTLY VIEWED -->
+  <div class="recently-viewed" id="recentlyViewedSection" style="display:none">
+    <div class="section-header"><div><div class="section-title">Recently Viewed</div></div></div>
+    <div class="rv-scroll" id="rvScroll"></div>
+  </div>
+
+  <!-- MAIN CATALOG -->
+  <div class="section-wrap" id="mainSearch">
+    <div class="search-filter-block">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input id="searchInput" placeholder="Search by name, brand, chipset, features…" oninput="filterPhones()">
+      </div>
+      <div class="filters-row">
+        <span class="filter-label">Category:</span>
+        <div class="filter-group">
+          <button class="chip active" id="chip-all" onclick="setFilter('all',this)">All</button>
+          <button class="chip" id="chip-flagship" onclick="setFilter('flagship',this)">Flagship</button>
+          <button class="chip" id="chip-midrange" onclick="setFilter('midrange',this)">Mid-range</button>
+          <button class="chip" id="chip-budget" onclick="setFilter('budget',this)">Budget</button>
+          <button class="chip" id="chip-foldable" onclick="setFilter('foldable',this)">Foldable</button>
+          <button class="chip" id="chip-favs" onclick="setFilter('favourites',this)">❤️ Saved</button>
+        </div>
+        <div class="sort-wrap" style="margin-left:auto">
+          <select id="sortSelect" onchange="filterPhones()">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating-desc">Top Rated</option>
+            <option value="name-asc">A–Z</option>
+            
+          </select>
+        </div>
+      </div>
+      <div class="advanced-filters">
+        <div class="adv-filter">
+          <label>Brand</label>
+          <select id="filterBrand" onchange="filterPhones()">
+            <option value="">All Brands</option>
+      <option value="Apple">🍎 Apple iPhone</option>
+      <option value="Samsung">🔷 Samsung Galaxy</option>
+            <option>Samsung</option><option>Apple</option><option>Google</option>
+            <option>OnePlus</option><option>Xiaomi</option><option>Tecno</option>
+            <option>Infinix</option><option>Realme</option><option>Sony</option><option>Nokia</option>
+          </select>
+        </div>
+        <div class="adv-filter">
+          <label>RAM</label>
+          <select id="filterRAM" onchange="filterPhones()">
+            <option value="">Any RAM</option>
+            <option value="4">4 GB+</option><option value="6">6 GB+</option>
+            <option value="8">8 GB+</option><option value="12">12 GB+</option><option value="16">16 GB+</option>
+          </select>
+        </div>
+        <div class="adv-filter">
+          <label>Network</label>
+          <select id="filterNetwork" onchange="filterPhones()">
+            <option value="">4G & 5G</option>
+            <option value="5G">5G Only</option>
+            <option value="4G">4G Only</option>
+          </select>
+        </div>
+        <div class="adv-filter">
+          <label>Battery</label>
+          <select id="filterBattery" onchange="filterPhones()">
+            <option value="">Any Battery</option>
+            <option value="4000">4000 mAh+</option>
+            <option value="5000">5000 mAh+</option>
+            <option value="6000">6000 mAh+</option>
+          </select>
+        </div>
+      </div>
+      <div class="price-range-row">
+        <span class="price-label">Price (USD):</span>
+        <div class="price-slider-group">
+          <input type="range" id="priceMin" min="0" max="2000" step="10" value="0" oninput="updatePriceLabel();filterPhones()">
+          <span>—</span>
+          <input type="range" id="priceMax" min="0" max="2000" step="10" value="2000" oninput="updatePriceLabel();filterPhones()">
+        </div>
+        <span class="price-val" id="priceLabel">$0 – $2000</span>
+      </div>
+    </div>
+
+    <div class="results-count" id="resultsCount"></div>
+    <div class="phones-grid" id="phonesGrid"></div>
+    <div id="noResults">
+      <span class="nr-icon">🔭</span>
+      <div class="nr-title">No phones found</div>
+      <div>Try different filters or search terms</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE: COMPARE ══════════ -->
+<div class="page" id="page-compare-page">
+  <div class="section-wrap" style="padding-top:40px">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Compare Phones</div>
+        <div class="section-sub">Select up to 4 phones to compare side-by-side</div>
+      </div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:28px;">
+      <div style="font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:14px;">Selected for comparison</div>
+      <div id="comparePageSelected" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;min-height:40px;"></div>
+      <button class="btn-primary" onclick="openCompareModal()" id="compareNowBtn" disabled>Compare Now →</button>
+      <button class="btn-ghost" onclick="clearCompare()" style="margin-left:8px">Clear All</button>
+    </div>
+    <div style="font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:16px;">All phones — click + Compare to add</div>
+    <div class="phones-grid" id="comparePickGrid"></div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE: ADMIN ══════════ -->
+<div class="page" id="page-admin">
+  <!-- Dashboard -->
+  <div class="section-wrap" style="padding-top:40px">
+    <div class="section-header">
+      <div><div class="section-title">Admin Dashboard</div><div class="section-sub">Analytics & site performance</div></div>
+    </div>
+    <div class="admin-grid">
+      <div class="admin-card">
+        <div class="admin-card-num" id="admTotalPhones">18</div>
+        <div class="admin-card-label">Total Phones</div>
+        <div class="admin-card-trend">▲ 3 added this month</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-num" id="admTotalViews">1,247</div>
+        <div class="admin-card-label">Page Views Today</div>
+        <div class="admin-card-trend">▲ 12% vs yesterday</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-num" id="admSearches">384</div>
+        <div class="admin-card-label">Searches Today</div>
+        <div class="admin-card-trend">Top: Samsung S25 Ultra</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-num" id="admUsers">92</div>
+        <div class="admin-card-label">Registered Users</div>
+        <div class="admin-card-trend">▲ 8 new today</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px;">
+      <div class="chart-bar-wrap">
+        <div class="chart-bar-title">Most Viewed Phones</div>
+        <div id="mostViewedBars"></div>
+      </div>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar-title">Most Searched Brands</div>
+        <div id="mostSearchedBars"></div>
+      </div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:28px;">
+      <div style="padding:18px 20px;border-bottom:1px solid var(--border);font-size:0.9rem;font-weight:600;">Recent Orders</div>
+      <table class="admin-table">
+        <thead><tr><th>Order</th><th>Phone</th><th>Customer</th><th>Amount</th><th>Payment</th><th>Status</th></tr></thead>
+        <tbody id="ordersTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Image Manager -->
+  <div class="admin-section">
+    <div class="admin-section-header">
+      <div class="admin-title-block">
+        <div class="admin-icon">📷</div>
+        <div>
+          <div class="admin-title">Image Manager</div>
+          <div class="admin-subtitle">Upload and manage phone photos</div>
+        </div>
+      </div>
+      <div class="admin-actions">
+        <button class="btn-upload" onclick="openUploadModal()">📤 Upload Images</button>
+        <button class="btn-bulk" id="bulkSelectToggle" onclick="toggleBulkMode()">☑ Select Multiple</button>
+      </div>
+    </div>
+    <div class="img-stats-bar">
+      <div class="img-stat"><div class="img-stat-num" id="is-total">0</div><div class="img-stat-label">Total images</div></div>
+      <div class="img-stat"><div class="img-stat-num" id="is-phones">0</div><div class="img-stat-label">Phones with photos</div></div>
+      <div class="img-stat"><div class="img-stat-num" id="is-storage">0 MB</div><div class="img-stat-label">Storage used</div></div>
+      <div class="img-stat"><div class="img-stat-num" id="is-brands">0</div><div class="img-stat-label">Brands covered</div></div>
+    </div>
+    <div class="bulk-toolbar" id="bulkToolbar">
+      <div class="bulk-count" id="bulkCount">0 images selected</div>
+      <button class="btn-bulk-delete" onclick="bulkDelete()">🗑 Delete Selected</button>
+      <button class="btn-bulk-cancel" onclick="toggleBulkMode()">Cancel</button>
+    </div>
+    <div class="img-controls">
+      <div class="img-search-wrap">
+        <span class="img-search-icon">🔍</span>
+        <input class="img-search" id="imgSearch" placeholder="Search by phone model or brand…" oninput="filterImages()">
+      </div>
+      <div class="img-filter-chips">
+        <button class="img-chip active" data-type="all" onclick="setImgFilter('all',this)">All</button>
+        <button class="img-chip" data-type="front" onclick="setImgFilter('front',this)">Front</button>
+        <button class="img-chip" data-type="back" onclick="setImgFilter('back',this)">Back</button>
+        <button class="img-chip" data-type="side" onclick="setImgFilter('side',this)">Side</button>
+        <button class="img-chip" data-type="gallery" onclick="setImgFilter('gallery',this)">Gallery</button>
+      </div>
+    </div>
+    <div class="img-catalog" id="imgCatalog"></div>
+    <div id="imgEmptyState" class="img-empty" style="display:none">
+      <span class="img-empty-icon">📷</span>
+      <div class="img-empty-title">No images yet</div>
+      <div class="img-empty-sub">Upload your first phone image to get started.<br>Supports JPG, PNG, and WEBP up to 10MB each.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PHONE SPEC EDITOR ══════════ -->
+<div class="admin-section" id="specEditorSection">
+  <div class="admin-section-header">
+    <div class="admin-title-block">
+      <div class="admin-icon">📝</div>
+      <div>
+        <div class="admin-title">Phone Spec Editor</div>
+        <div class="admin-subtitle">Edit phone names, prices, specs and badges — changes save to browser storage</div>
+      </div>
+    </div>
+  </div>
+  <div class="spec-editor-wrap">
+    <div class="spec-editor-header">
+      <div class="spec-editor-title">📱 All Phones <span id="specUnsavedDot" class="spec-unsaved-dot" style="display:none"></span></div>
+      <div class="spec-editor-actions">
+        <button class="btn-add-phone" onclick="addNewPhone()">＋ Add Phone</button>
+        <button class="btn-spec-save" onclick="saveSpecEdits()">💾 Save All Changes</button>
+        <button class="btn-spec-save" style="background:linear-gradient(135deg,var(--accent3),#005f70)" onclick="downloadSpecsJSON()">⬇ Download JSON</button>
+        <label class="btn-spec-save" style="background:linear-gradient(135deg,#5b21b6,#7c3aed);cursor:pointer" title="Import a previously downloaded JSON file">⬆ Import JSON<input type="file" accept=".json" style="display:none" onchange="importSpecsJSON(event)"></label>
+        <button class="btn-spec-reset" onclick="resetSpecEdits()">↩ Reset to Default</button>
+      </div>
+    </div>
+    <div class="spec-table-scroll">
+      <table class="spec-table" id="specTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Brand</th>
+            <th>Name</th>
+            <th>Price (USD)</th>
+            <th>RAM (GB)</th>
+            <th>Storage</th>
+            <th>Camera</th>
+            <th>Battery (mAh)</th>
+            <th>Network</th>
+            <th>Chipset</th>
+            <th>Display</th>
+            <th>Category</th>
+            <th>Badge</th>
+            <th>Rating</th>
+            <th>Del</th>
+          </tr>
+        </thead>
+        <tbody id="specTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>© 2025 iSam Store — Apple iPhone &amp; Samsung Galaxy. Prices updated daily in USD.</div>
+  <div style="display:flex;gap:16px"><a>Privacy</a><a>Terms</a><a>Contact</a></div>
+</footer>
+
+<!-- ══════════ MODALS ══════════ -->
+
+<!-- PHONE DETAIL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- COMPARE -->
+<div class="modal-overlay" id="compareOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal" style="max-width:880px">
+    <div class="modal-header" style="padding:22px 24px">
+      <div style="font-size:1.1rem;font-weight:700">Side-by-Side Comparison</div>
+      <button class="modal-close" onclick="document.getElementById('compareOverlay').classList.remove('open')">✕</button>
+    </div>
+    <div class="modal-body" id="compareModalBody" style="padding:0 24px 24px"></div>
+  </div>
+</div>
+
+<!-- AI RECOMMENDER -->
+<div class="modal-overlay" id="aiOverlay" onclick="if(event.target===this)closeAIModal()">
+  <div class="ai-modal-wrap">
+    <div class="ai-header">
+      <div class="ai-title">✦ AI Phone Finder <span class="ai-badge">CLAUDE AI</span></div>
+      <button class="modal-close" onclick="closeAIModal()">✕</button>
+    </div>
+    <div class="ai-body">
+      <p class="ai-question">Tell me your budget, use case, and priorities. I'll find the best match from our Uganda catalog.</p>
+      <div class="ai-quick-picks">
+        <div class="ai-quick" onclick="setAIPrompt('Best phone under $500 with great camera')">📸 Best camera under 1.5M</div>
+        <div class="ai-quick" onclick="setAIPrompt('Best 5G phone for business use with long battery')">💼 5G for business</div>
+        <div class="ai-quick" onclick="setAIPrompt('Cheapest phone with 5G support')">📡 Cheapest 5G</div>
+        <div class="ai-quick" onclick="setAIPrompt('Best gaming phone under $700')">🎮 Gaming phone</div>
+      </div>
+      <textarea class="ai-textarea" id="aiInput" placeholder="e.g. I want a good camera phone under $400 with great battery life…"></textarea>
+      <button class="ai-submit" id="aiBtn" onclick="getAIRecommendation()">
+        <span id="aiBtnText">✦ Find My Perfect Phone</span>
+      </button>
+      <div class="ai-result" id="aiResult">
+        <div class="ai-result-title">// AI Recommendation</div>
+        <div class="ai-result-text" id="aiResultText"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AUTH -->
+<div class="modal-overlay" id="authOverlay" onclick="if(event.target===this)closeAuthModal()">
+  <div class="auth-modal-wrap">
+    <div class="auth-header">
+      <div class="auth-logo">PhoneGrid</div>
+      <div class="auth-title" id="authTitle">Welcome back</div>
+      <div class="auth-sub" id="authSub">Sign in to save phones, get price alerts, and track deals.</div>
+    </div>
+    <div class="auth-body">
+      <div class="auth-tabs">
+        <div class="auth-tab active" id="authTabLogin" onclick="switchAuthTab('login')">Sign In</div>
+        <div class="auth-tab" id="authTabSignup" onclick="switchAuthTab('signup')">Create Account</div>
+      </div>
+      <div class="auth-form">
+        <div class="auth-input-group" id="authNameGroup" style="display:none">
+          <label>Full Name</label>
+          <input class="auth-input" id="authName" placeholder="Your name">
+        </div>
+        <div class="auth-input-group">
+          <label>Email</label>
+          <input class="auth-input" id="authEmail" placeholder="you@example.com" type="email">
+        </div>
+        <div class="auth-input-group">
+          <label>Password</label>
+          <input class="auth-input" id="authPassword" placeholder="Password" type="password">
+        </div>
+        <button class="auth-submit" onclick="handleAuth()" id="authSubmit">Sign In</button>
+        <div class="auth-divider">or</div>
+        <button class="auth-submit" style="background:rgba(255,255,255,0.08);border:1px solid var(--border);" onclick="handleGuestAuth()">Continue as Guest</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UPLOAD -->
+<div class="modal-overlay" id="uploadOverlay" onclick="if(event.target===this)closeUploadModal()">
+  <div class="upload-modal-wrap">
+    <div class="upload-header">
+      <div class="upload-title"><span>📤</span><span id="uploadModalTitle">Upload Phone Image</span></div>
+      <button class="modal-close" onclick="closeUploadModal()">✕</button>
+    </div>
+    <div class="upload-body">
+      <div class="upload-message" id="uploadMessage"></div>
+      <div class="drop-zone" id="dropZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+        <span class="drop-zone-icon">🖼</span>
+        <div class="drop-zone-title">Drop images here, or click to browse</div>
+        <div class="drop-zone-sub">Select one or multiple files<br>Max 10MB per image</div>
+        <div class="drop-zone-formats">
+          <span class="format-badge">JPG</span><span class="format-badge">PNG</span><span class="format-badge">WEBP</span>
+        </div>
+        <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp" multiple onchange="handleFileSelect(event)">
+      </div>
+      <div class="preview-area" id="previewArea">
+        <div class="preview-title">Preview — <span id="previewCount">0</span> file(s)</div>
+        <div class="preview-grid" id="previewGrid"></div>
+      </div>
+      <div class="upload-form-grid">
+        <div class="form-group">
+          <label class="form-label">Phone Brand</label>
+          <select class="form-select" id="uploadBrand" onchange="updateModelSelect()">
+            <option value="">Select brand…</option>
+            <option>Samsung</option><option>Apple</option><option>Google</option>
+            <option>OnePlus</option><option>Xiaomi</option><option>Tecno</option>
+            <option>Infinix</option><option>Realme</option><option>Sony</option><option>Nokia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Model</label>
+          <select class="form-select" id="uploadModel"><option value="">Select model…</option></select>
+        </div>
+        <div class="form-group full-width">
+          <label class="form-label">Image Type</label>
+          <div class="img-type-grid">
+            <div class="img-type-btn selected" data-type="front" onclick="selectImgType(this)"><span class="img-type-icon">📱</span><div class="img-type-label">Front</div></div>
+            <div class="img-type-btn" data-type="back" onclick="selectImgType(this)"><span class="img-type-icon">🔲</span><div class="img-type-label">Back</div></div>
+            <div class="img-type-btn" data-type="side" onclick="selectImgType(this)"><span class="img-type-icon">📐</span><div class="img-type-label">Side</div></div>
+            <div class="img-type-btn" data-type="gallery" onclick="selectImgType(this)"><span class="img-type-icon">🖼</span><div class="img-type-label">Gallery</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="watermark-toggle">
+        <div class="watermark-label">
+          <span style="font-size:1.1rem">💧</span>
+          <div><div class="watermark-label-text">Add PhoneGrid watermark</div><div class="watermark-label-sub">Adds branded watermark to images</div></div>
+        </div>
+        <label class="toggle-switch"><input type="checkbox" id="watermarkToggle"><span class="toggle-slider"></span></label>
+      </div>
+      <div class="upload-progress" id="uploadProgress">
+        <div class="progress-label"><span>Saving images…</span><span id="progressPercent">0%</span></div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" id="progressFill"></div></div>
+        <div class="progress-file-list" id="progressFileList"></div>
+      </div>
+      <button class="upload-submit" id="uploadSubmitBtn" onclick="submitUpload()"><span id="uploadSubmitText">↑ Save Images</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">›</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-info" id="lightboxInfo"></div>
+  </div>
+</div>
+
+<!-- CART PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <div class="cart-title">🛒 Your Cart</div>
+      <button class="modal-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty"><span class="cart-empty-icon">🛍️</span><div>Your cart is empty</div></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <div class="cart-total-label">Total</div>
+        <div class="cart-total-val" id="cartTotal">$0</div>
+      </div>
+      <button class="checkout-btn" onclick="openPaymentModal()">Proceed to Payment →</button>
+      <button class="btn-ghost" style="width:100%;text-align:center" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAYMENT -->
+<div class="modal-overlay" id="paymentOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="payment-modal-wrap">
+    <div class="modal-header" style="padding:22px 22px 0">
+      <div>
+        <div class="payment-title">Complete Payment</div>
+        <div class="payment-sub">Pay securely with your preferred method</div>
+      </div>
+      <button class="modal-close" onclick="document.getElementById('paymentOverlay').classList.remove('open')">✕</button>
+    </div>
+    <div class="payment-body">
+      <div class="payment-methods">
+        <div class="payment-method payment-mtn selected" onclick="selectPayment(this,'card')">
+          <span class="payment-method-icon">💳</span>
+          <div class="payment-method-name">Credit / Debit Card</div>
+          <div class="payment-method-sub">Visa, Mastercard, Amex</div>
+        </div>
+        <div class="payment-method payment-airtel" onclick="selectPayment(this,'paypal')">
+          <span class="payment-method-icon">🅿️</span>
+          <div class="payment-method-name">PayPal</div>
+          <div class="payment-method-sub">Pay with PayPal balance</div>
+        </div>
+      </div>
+      <div class="payment-phone-input">
+        <label>Card / Account Number</label>
+        <input id="momoNumber" placeholder="e.g. 4111 1111 1111 1111" type="tel">
+      </div>
+      <div class="payment-total">
+        <div style="font-size:0.85rem;color:var(--muted)">Total to pay</div>
+        <div style="font-family:'Space Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--ugx)" id="payTotal">$0</div>
+      </div>
+      <button class="pay-btn" onclick="processPayment()">💸 Pay Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compareBar">
+  <span class="compare-bar-label">Compare:</span>
+  <div class="compare-items" id="compareItems"></div>
+  <button class="btn-compare-go" onclick="openCompareModal()">Compare Now</button>
+  <button class="btn-compare-clear" onclick="clearCompare()">Clear</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+<script>
+// ══════════════════════════════════════════════════════
+//  PHONE DATA
+// ══════════════════════════════════════════════════════
+const PHONES = [
+  // ── Apple iPhone ──
+  { id:1,  brand:'Apple',   name:'iPhone 16 Pro Max', price:1199, ugx:1199, ram:8,  storage:'256GB', camera:'48MP', battery:4422, network:'5G', chipset:'A18 Pro',         display:'6.9" Super Retina XDR', category:'flagship', rating:4.9, reviews:210, badge:'NEW',   priceDrop:false },
+  { id:2,  brand:'Apple',   name:'iPhone 16 Pro',     price:999,  ugx:999,  ram:8,  storage:'128GB', camera:'48MP', battery:3582, network:'5G', chipset:'A18 Pro',         display:'6.3" Super Retina XDR', category:'flagship', rating:4.9, reviews:187, badge:'HOT',   priceDrop:false },
+  { id:3,  brand:'Apple',   name:'iPhone 16',         price:799,  ugx:799,  ram:8,  storage:'128GB', camera:'48MP', battery:3561, network:'5G', chipset:'A18',             display:'6.1" Super Retina',     category:'flagship', rating:4.8, reviews:176, priceDrop:false },
+  { id:4,  brand:'Apple',   name:'iPhone 16 Plus',    price:899,  ugx:899,  ram:8,  storage:'128GB', camera:'48MP', battery:4674, network:'5G', chipset:'A18',             display:'6.7" Super Retina',     category:'flagship', rating:4.8, reviews:120, priceDrop:false },
+  { id:5,  brand:'Apple',   name:'iPhone 15 Pro Max', price:999,  ugx:999,  ram:8,  storage:'256GB', camera:'48MP', battery:4422, network:'5G', chipset:'A17 Pro',         display:'6.7" Super Retina XDR', category:'flagship', rating:4.8, reviews:298, badge:'DEAL',  priceDrop:true, dropPct:10 },
+  { id:6,  brand:'Apple',   name:'iPhone 15',         price:699,  ugx:699,  ram:6,  storage:'128GB', camera:'48MP', battery:3349, network:'5G', chipset:'A16 Bionic',      display:'6.1" Super Retina',     category:'flagship', rating:4.7, reviews:241, badge:'VALUE', priceDrop:true, dropPct:12 },
+  { id:7,  brand:'Apple',   name:'iPhone SE (3rd gen)',price:429,  ugx:429,  ram:4,  storage:'64GB',  camera:'12MP', battery:2018, network:'5G', chipset:'A15 Bionic',      display:'4.7" Retina HD',        category:'midrange', rating:4.4, reviews:156, priceDrop:false },
+  { id:8,  brand:'Apple',   name:'iPhone 14',         price:599,  ugx:599,  ram:6,  storage:'128GB', camera:'12MP', battery:3279, network:'5G', chipset:'A15 Bionic',      display:'6.1" Super Retina',     category:'flagship', rating:4.7, reviews:312, badge:'DEAL',  priceDrop:true, dropPct:15 },
+  // ── Samsung Galaxy ──
+  { id:9,  brand:'Samsung', name:'Galaxy S25 Ultra',  price:1299, ugx:1299, ram:12, storage:'256GB', camera:'200MP',battery:5000, network:'5G', chipset:'Snapdragon 8 Elite', display:'6.9" QHD+ AMOLED',  category:'flagship', rating:4.8, reviews:142, badge:'HOT',   priceDrop:true,  dropPct:8 },
+  { id:10, brand:'Samsung', name:'Galaxy S25+',       price:999,  ugx:999,  ram:12, storage:'256GB', camera:'50MP', battery:4900, network:'5G', chipset:'Snapdragon 8 Elite', display:'6.7" QHD+ AMOLED',  category:'flagship', rating:4.8, reviews:110, badge:'NEW',   priceDrop:false },
+  { id:11, brand:'Samsung', name:'Galaxy S25',        price:799,  ugx:799,  ram:12, storage:'128GB', camera:'50MP', battery:4000, network:'5G', chipset:'Snapdragon 8 Elite', display:'6.2" FHD+ AMOLED',  category:'flagship', rating:4.7, reviews:98,  priceDrop:false },
+  { id:12, brand:'Samsung', name:'Galaxy Z Fold 6',   price:1899, ugx:1899, ram:12, storage:'256GB', camera:'50MP', battery:4400, network:'5G', chipset:'Snapdragon 8 Gen 3', display:'7.6" Foldable',      category:'foldable', rating:4.5, reviews:42,  priceDrop:false },
+  { id:13, brand:'Samsung', name:'Galaxy Z Flip 6',   price:1099, ugx:1099, ram:12, storage:'256GB', camera:'50MP', battery:4000, network:'5G', chipset:'Snapdragon 8 Gen 3', display:'6.7" Foldable',      category:'foldable', rating:4.4, reviews:55,  priceDrop:false },
+  { id:14, brand:'Samsung', name:'Galaxy A55',        price:449,  ugx:449,  ram:8,  storage:'128GB', camera:'50MP', battery:5000, network:'5G', chipset:'Exynos 1480',        display:'6.6" Super AMOLED',  category:'midrange', rating:4.4, reviews:93,  badge:'VALUE', priceDrop:false },
+  { id:15, brand:'Samsung', name:'Galaxy A35',        price:349,  ugx:349,  ram:6,  storage:'128GB', camera:'50MP', battery:5000, network:'5G', chipset:'Exynos 1380',        display:'6.6" Super AMOLED',  category:'midrange', rating:4.3, reviews:77,  badge:'DEAL',  priceDrop:true, dropPct:10 },
+  { id:16, brand:'Samsung', name:'Galaxy A15',        price:199,  ugx:199,  ram:4,  storage:'128GB', camera:'50MP', battery:5000, network:'4G', chipset:'Helio G99',          display:'6.5" Super AMOLED',  category:'budget',   rating:4.1, reviews:165, badge:'POPULAR',priceDrop:false },
+  { id:17, brand:'Samsung', name:'Galaxy S24 FE',     price:649,  ugx:649,  ram:8,  storage:'128GB', camera:'50MP', battery:4700, network:'5G', chipset:'Exynos 2500',        display:'6.7" FHD+ AMOLED',  category:'flagship', rating:4.5, reviews:88,  badge:'HOT',   priceDrop:true,  dropPct:7 },
+  { id:18, brand:'Samsung', name:'Galaxy M55',        price:379,  ugx:379,  ram:8,  storage:'128GB', camera:'50MP', battery:5000, network:'5G', chipset:'Snapdragon 7 Gen 1', display:'6.7" Super AMOLED',  category:'midrange', rating:4.3, reviews:61,  priceDrop:false },
+];
+
+// ── Brand filter helper ──
+function filterBrand(brand) {
+  const sel = document.getElementById('brandFilter');
+  if (sel) { sel.value = brand; }
+  renderCatalog();
+}
+// ── State ──
+let currentFilter = 'all';
+let compareList = [];
+let favourites = JSON.parse(localStorage.getItem('pg_favs') || '[]');
+let recentlyViewed = JSON.parse(localStorage.getItem('pg_recent') || '[]');
+let cart = JSON.parse(localStorage.getItem('pg_cart') || '[]');
+let priceAlerts = JSON.parse(localStorage.getItem('pg_alerts') || '[]');
+let currentUser = JSON.parse(localStorage.getItem('pg_user') || 'null');
+let uploadedImages = JSON.parse(localStorage.getItem('pg_images') || '[]');
+let selectedFiles = [];
+let currentImgType = 'front';
+let bulkMode = false;
+let bulkSelected = [];
+let imgFilter = 'all';
+let currentLightboxImages = [];
+let currentLightboxIndex = 0;
+let currentAuthTab = 'login';
+let selectedPaymentMethod = 'mtn';
+let userReviews = JSON.parse(localStorage.getItem('pg_reviews') || '{}');
+let selectedStars = 5;
+
+// ══════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  updateAuthUI();
+  updateFavCount();
+  updateCartCount();
+  renderPhones(PHONES);
+  renderComparePickGrid();
+  renderAdminDashboard();
+  renderImages();
+  renderRecentlyViewed();
+  updatePriceLabel();
+});
+
+// ══════════════════════════════════════════════════════
+//  PAGE NAVIGATION
+// ══════════════════════════════════════════════════════
+function showPage(p) {
+  document.querySelectorAll('.page').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.page-tab,.nav-links a').forEach(x => x.classList.remove('active'));
+  document.getElementById('page-'+p)?.classList.add('active');
+  document.getElementById('tab-'+p)?.classList.add('active');
+  document.getElementById('nav-'+p)?.classList.add('active');
+}
+
+// ══════════════════════════════════════════════════════
+//  PHONE RENDERING
+// ══════════════════════════════════════════════════════
+function formatUSD(n) { return '$' + n.toLocaleString(); }
+function formatUGX(n) { return formatUSD(n); }  // alias for compatibility
+
+function getPhoneImages(phone) {
+  return uploadedImages.filter(img =>
+    img.brand === phone.brand && img.model === phone.name
+  );
+}
+
+function renderPhones(phones) {
+  const grid = document.getElementById('phonesGrid');
+  const noRes = document.getElementById('noResults');
+  const count = document.getElementById('resultsCount');
+  if (!phones.length) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    count.innerHTML = '';
+    return;
+  }
+  noRes.style.display = 'none';
+  count.innerHTML = `Showing <span>${phones.length}</span> of ${PHONES.length} phones`;
+  grid.innerHTML = phones.map(p => buildCard(p, false)).join('');
+}
+
+function buildCard(p, forCompare) {
+  const imgs = getPhoneImages(p);
+  const hasImg = imgs.length > 0;
+  const isFav = favourites.includes(p.id);
+  const inCompare = compareList.includes(p.id);
+  const reviews = userReviews[p.id] || [];
+  const allRatings = reviews.map(r => r.stars);
+  const avgRating = allRatings.length ? (allRatings.reduce((a,b)=>a+b,0)/allRatings.length).toFixed(1) : p.rating;
+  const totalReviews = p.reviews + reviews.length;
+  const stars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5-Math.round(avgRating));
+  const badgeHtml = p.badge ? `<div class="card-badge ${p.badge==='HOT'?'hot':p.badge==='DEAL'?'deal':''}">${p.badge}</div>` : '';
+  const dropHtml = p.priceDrop ? `<div class="price-drop">↓ ${p.dropPct}%</div>` : '';
+  const imgHtml = hasImg
+    ? `<img class="card-img" src="${imgs[0].dataUrl}" alt="${p.name}"><div class="card-img-overlay"></div>${hasImg?'<div class="has-image-badge">PHOTO</div>':''}`
+    : `<svg class="phone-svg" viewBox="0 0 80 140" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="70" height="130" rx="12" fill="rgba(124,110,255,0.15)" stroke="rgba(124,110,255,0.4)" stroke-width="1.5"/><rect x="14" y="18" width="52" height="80" rx="4" fill="rgba(124,110,255,0.2)"/><circle cx="40" cy="115" r="7" fill="rgba(124,110,255,0.3)"/><rect x="28" y="8" width="24" height="4" rx="2" fill="rgba(124,110,255,0.3)"/></svg>`;
+
+  const compareBtn = forCompare
+    ? `<button class="compare-btn ${inCompare?'active':''}" onclick="event.stopPropagation();toggleCompare(${p.id})">${inCompare?'✓ Added':'+ Compare'}</button>`
+    : `<button class="compare-btn ${inCompare?'active':''}" onclick="event.stopPropagation();toggleCompare(${p.id})">${inCompare?'✓':'+ Compare'}</button>`;
+
+  return `<div class="phone-card" onclick="openModal(${p.id})">
+    ${badgeHtml}
+    <button class="fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav(${p.id})" title="${isFav?'Remove from saved':'Save phone'}">${isFav?'❤️':'🤍'}</button>
+    <div class="card-visual">${imgHtml}${dropHtml}</div>
+    <div class="card-body">
+      <div class="card-brand"><span class="brand-pill-${p.brand==='Apple'?'apple':'samsung'}">${p.brand==='Apple'?'🍎 Apple':'🔷 Samsung'}</span></div>
+      <div class="card-name">${p.name}</div>
+      <div class="card-price-ugx">$${p.price}</div>
+      <div class="card-specs">
+        <div><div class="spec-key">RAM</div><div class="spec-val">${p.ram} GB</div></div>
+        <div><div class="spec-key">Camera</div><div class="spec-val">${p.camera}</div></div>
+        <div><div class="spec-key">Battery</div><div class="spec-val">${p.battery} mAh</div></div>
+        <div><div class="spec-key">Storage</div><div class="spec-val">${p.storage}</div></div>
+      </div>
+      <div class="card-tags">
+        <span class="tag network">${p.network}</span>
+        <span class="tag">${p.chipset.split(' ').slice(0,2).join(' ')}</span>
+        <span class="tag">${p.category}</span>
+      </div>
+      <div class="card-footer">
+        <div class="rating">
+          <span class="stars">${stars}</span>
+          <span class="rating-num">${avgRating}</span>
+          <span class="review-count">(${totalReviews})</span>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center">
+          ${compareBtn}
+          <button class="view-btn" onclick="event.stopPropagation();openModal(${p.id})">View</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════════
+//  FILTERING & SEARCH
+// ══════════════════════════════════════════════════════
+function filterPhones() {
+  let phones = [...PHONES];
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const brand = document.getElementById('filterBrand').value;
+  const ram = document.getElementById('filterRAM').value;
+  const network = document.getElementById('filterNetwork').value;
+  const battery = document.getElementById('filterBattery').value;
+  const minUGX = +document.getElementById('priceMin').value;
+  const maxUGX = +document.getElementById('priceMax').value;
+  // Using USD price field
+  const sort = document.getElementById('sortSelect').value;
+
+  if (q) phones = phones.filter(p =>
+    (p.name+p.brand+p.chipset+p.camera+p.display+p.network+p.category)
+      .toLowerCase().includes(q));
+
+  if (currentFilter === 'favourites') phones = phones.filter(p => favourites.includes(p.id));
+  else if (currentFilter !== 'all') phones = phones.filter(p => p.category === currentFilter);
+
+  if (brand) phones = phones.filter(p => p.brand === brand);
+  if (ram) phones = phones.filter(p => p.ram >= +ram);
+  if (network) phones = phones.filter(p => p.network === network);
+  if (battery) phones = phones.filter(p => p.battery >= +battery);
+  phones = phones.filter(p => p.price >= minUGX && p.price <= maxUGX);
+
+  if (sort === 'price-asc') phones.sort((a,b)=>a.price-b.price);
+  else if (sort === 'price-desc') phones.sort((a,b)=>b.price-a.price);
+  else if (sort === 'rating-desc') phones.sort((a,b)=>b.rating-a.rating);
+  else if (sort === 'name-asc') phones.sort((a,b)=>a.name.localeCompare(b.name));
+
+  renderPhones(phones);
+}
+
+function setFilter(f, el) {
+  currentFilter = f;
+  document.querySelectorAll('[id^="chip-"]').forEach(c=>c.classList.remove('active'));
+  if (el) el.classList.add('active');
+  else { const c = document.getElementById('chip-favs'); if(c) c.classList.add('active'); }
+  filterPhones();
+  if (f === 'favourites') showPage('catalog');
+}
+
+function updatePriceLabel() {
+  const min = +document.getElementById('priceMin').value;
+  const max = +document.getElementById('priceMax').value;
+  document.getElementById('priceLabel').textContent =
+    `$${min} – $${max}`;
+}
+
+// ══════════════════════════════════════════════════════
+//  FAVOURITES
+// ══════════════════════════════════════════════════════
+function toggleFav(id) {
+  if (favourites.includes(id)) {
+    favourites = favourites.filter(x => x !== id);
+    showToast('Removed from saved phones');
+  } else {
+    favourites.push(id);
+    showToast('❤️ Phone saved!');
+  }
+  localStorage.setItem('pg_favs', JSON.stringify(favourites));
+  updateFavCount();
+  filterPhones();
+  renderComparePickGrid();
+}
+
+function updateFavCount() {
+  document.getElementById('favCount').textContent = favourites.length;
+}
+
+// ══════════════════════════════════════════════════════
+//  RECENTLY VIEWED
+// ══════════════════════════════════════════════════════
+function addToRecentlyViewed(id) {
+  recentlyViewed = [id, ...recentlyViewed.filter(x => x !== id)].slice(0, 8);
+  localStorage.setItem('pg_recent', JSON.stringify(recentlyViewed));
+  renderRecentlyViewed();
+}
+
+function renderRecentlyViewed() {
+  const sec = document.getElementById('recentlyViewedSection');
+  const scroll = document.getElementById('rvScroll');
+  if (!recentlyViewed.length) { sec.style.display = 'none'; return; }
+  sec.style.display = 'block';
+  scroll.innerHTML = recentlyViewed.map(id => {
+    const p = PHONES.find(x => x.id === id);
+    if (!p) return '';
+    return `<div class="rv-card" onclick="openModal(${p.id})">
+      <div class="rv-card-brand">${p.brand}</div>
+      <div class="rv-card-name">${p.name}</div>
+      <div class="rv-card-price">$${p.price}</div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════════════
+//  PHONE DETAIL MODAL
+// ══════════════════════════════════════════════════════
+function openModal(id) {
+  const p = PHONES.find(x => x.id === id);
+  if (!p) return;
+  addToRecentlyViewed(id);
+  const imgs = getPhoneImages(p);
+  const reviews = userReviews[p.id] || [];
+  const allReviews = reviews;
+  const avgRating = allReviews.length
+    ? (allReviews.reduce((s,r)=>s+r.stars,0)/allReviews.length).toFixed(1)
+    : p.rating;
+
+  const priceHistory = generatePriceHistory(p.price);
+  const lowestPrice = Math.min(...priceHistory.map(x=>x.price));
+  const hasAlert = priceAlerts.includes(id);
+  const isFav = favourites.includes(p.id);
+
+  const mainVisual = imgs.length
+    ? `<img class="modal-img-main" src="${imgs[0].dataUrl}" alt="${p.name}" onclick="openLightbox(${JSON.stringify(imgs).replace(/"/g,'&quot;')},0)">`
+    : `<div style="display:flex;align-items:center;justify-content:center;height:100%;background:radial-gradient(circle,rgba(124,110,255,0.2),transparent 70%)"><svg width="90" height="160" viewBox="0 0 80 140" fill="none"><rect x="5" y="5" width="70" height="130" rx="12" fill="rgba(124,110,255,0.15)" stroke="rgba(124,110,255,0.4)" stroke-width="1.5"/><rect x="14" y="18" width="52" height="80" rx="4" fill="rgba(124,110,255,0.2)"/><circle cx="40" cy="115" r="7" fill="rgba(124,110,255,0.3)"/></svg></div>`;
+
+  const thumbHtml = imgs.length > 1
+    ? `<div class="thumb-gallery">${imgs.map((img,i)=>`<div class="thumb ${i===0?'active':''}" onclick="switchModalImg('${img.dataUrl}',this)"><img src="${img.dataUrl}" alt=""></div>`).join('')}</div>`
+    : '';
+
+  const reviewsHtml = allReviews.length ? allReviews.map(r => `
+    <div class="review-item">
+      <div class="review-header">
+        <span class="review-author">${r.author}</span>
+        <div style="display:flex;gap:8px;align-items:center">
+          ${r.verified?'<span class="verified-badge">✓ Verified</span>':''}
+          <span class="review-date">${r.date}</span>
+        </div>
+      </div>
+      <div class="review-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+      <div class="review-text">${r.text}</div>
+      <div class="review-actions">
+        <button class="review-vote" onclick="voteReview(${id},${r.id},this)">👍 ${r.likes||0}</button>
+      </div>
+    </div>`).join('') : `<div style="color:var(--muted);font-size:0.85rem;padding:16px 0">No reviews yet. Be the first to review this phone!</div>`;
+
+  document.getElementById('modalContent').innerHTML = `
+    <div class="modal-header">
+      <div>
+        <div class="modal-brand">${p.brand}</div>
+        <div class="modal-name">${p.name}</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-visual" id="modalMainVisual">${mainVisual}</div>
+    ${thumbHtml}
+    <div class="modal-body">
+      <div class="modal-price-ugx">$${p.price}</div>
+
+      <div class="modal-section-title">Specifications</div>
+      <div class="modal-specs-grid">
+        <div class="modal-spec"><div class="modal-spec-key">Display</div><div class="modal-spec-val">${p.display}</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">Chipset</div><div class="modal-spec-val">${p.chipset}</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">RAM</div><div class="modal-spec-val">${p.ram} GB</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">Storage</div><div class="modal-spec-val">${p.storage}</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">Camera</div><div class="modal-spec-val">${p.camera}</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">Battery</div><div class="modal-spec-val">${p.battery} mAh</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">Network</div><div class="modal-spec-val">${p.network}</div></div>
+        <div class="modal-spec"><div class="modal-spec-key">Category</div><div class="modal-spec-val" style="text-transform:capitalize">${p.category}</div></div>
+      </div>
+
+      <!-- Price History -->
+      <div class="modal-section-title">Price History (USD)</div>
+      <div class="price-history-wrap">
+        <div class="price-history-chart">
+          <svg class="price-chart-svg" viewBox="0 0 300 70" preserveAspectRatio="none">
+            ${buildPriceChartSVG(priceHistory)}
+          </svg>
+        </div>
+        <div class="price-alert-row">
+          <div class="lowest-price">✓ Lowest USD price tracked: ${formatUGX(lowestPrice)}</div>
+          <button class="price-alert-btn ${hasAlert?'active':''}" onclick="togglePriceAlert(${id},this)">
+            ${hasAlert ? '🔔 Alert set' : '🔔 Alert me on price drop'}
+          </button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="modal-actions">
+        <button class="add-cart-btn" onclick="addToCart(${id})">🛒 Add to Cart</button>
+        <a class="whatsapp-btn" href="https://wa.me/?text=Hi, I'm interested in the ${encodeURIComponent(p.brand+' '+p.name)} ($${p.price})" target="_blank">💬 WhatsApp Enquiry</a>
+        <button class="fav-btn" style="position:static;width:auto;height:auto;border-radius:100px;padding:8px 16px;font-size:0.82rem" onclick="toggleFav(${id})">${isFav?'❤️ Saved':'🤍 Save'}</button>
+        <button class="compare-btn" onclick="toggleCompare(${id});showToast('Added to compare')">${compareList.includes(id)?'✓ In Compare':'+ Compare'}</button>
+      </div>
+
+      <!-- Reviews -->
+      <div class="reviews-section">
+        <div class="modal-section-title">Reviews & Ratings — ⭐ ${avgRating} (${p.reviews + allReviews.length} total)</div>
+        <div class="review-form">
+          <div style="font-size:0.82rem;color:var(--muted);margin-bottom:10px">Write a review</div>
+          <div class="star-picker" id="starPicker" onclick="pickStar(event)">
+            <span data-star="1">⭐</span><span data-star="2">⭐</span><span data-star="3">⭐</span><span data-star="4">⭐</span><span data-star="5">⭐</span>
+          </div>
+          <textarea id="reviewText" placeholder="Share your experience with this phone…" rows="3" style="width:100%;background:var(--tag-bg);border:1px solid var(--border);border-radius:10px;padding:10px 12px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.85rem;outline:none;resize:none;margin-bottom:10px;transition:border-color 0.2s"></textarea>
+          <button class="review-submit" onclick="submitReview(${id})">Post Review</button>
+        </div>
+        <div id="reviewsList">${reviewsHtml}</div>
+      </div>
+    </div>`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function switchModalImg(src, thumb) {
+  const wrap = document.getElementById('modalMainVisual');
+  if (wrap) wrap.querySelector('img')?.setAttribute('src', src);
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  thumb?.classList.add('active');
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modalOverlay')) {
+    document.getElementById('modalOverlay').classList.remove('open');
+  }
+}
+
+function generatePriceHistory(currentUGX) {
+  const history = [];
+  let price = currentUGX * 1.15;
+  for (let i = 11; i >= 0; i--) {
+    price += (Math.random() - 0.52) * currentUGX * 0.05;
+    price = Math.max(currentUGX * 0.85, price);
+    history.push({ month: i, price: Math.round(price/1000)*1000 });
+  }
+  history.push({ month: 0, price: currentUGX });
+  return history;
+}
+
+function buildPriceChartSVG(history) {
+  const prices = history.map(h => h.price);
+  const min = Math.min(...prices), max = Math.max(...prices);
+  const range = max - min || 1;
+  const pts = history.map((h,i) => {
+    const x = (i / (history.length-1)) * 280 + 10;
+    const y = 60 - ((h.price - min) / range) * 50;
+    return `${x},${y}`;
+  }).join(' ');
+  return `
+    <defs><linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(124,110,255,0.3)"/>
+      <stop offset="100%" stop-color="rgba(124,110,255,0)"/>
+    </linearGradient></defs>
+    <polyline points="${pts}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${history[history.length-1] ? (280/(history.length-1))*(history.length-1)+10 : 290}" cy="${60-((history[history.length-1].price-min)/range)*50}" r="4" fill="var(--accent)"/>`;
+}
+
+// ══════════════════════════════════════════════════════
+//  REVIEWS
+// ══════════════════════════════════════════════════════
+function pickStar(e) {
+  const star = e.target.closest('[data-star]');
+  if (!star) return;
+  selectedStars = +star.dataset.star;
+  const picker = document.getElementById('starPicker');
+  if (picker) {
+    picker.querySelectorAll('span').forEach((s,i) => {
+      s.style.opacity = i < selectedStars ? '1' : '0.3';
+    });
+  }
+}
+
+function submitReview(phoneId) {
+  const text = document.getElementById('reviewText')?.value?.trim();
+  if (!text) { showToast('Please write a review'); return; }
+  if (!userReviews[phoneId]) userReviews[phoneId] = [];
+  const review = {
+    id: Date.now(),
+    author: currentUser ? currentUser.name : 'Anonymous',
+    stars: selectedStars,
+    text,
+    date: new Date().toLocaleDateString('en-US'),
+    verified: !!currentUser,
+    likes: 0
+  };
+  userReviews[phoneId].push(review);
+  localStorage.setItem('pg_reviews', JSON.stringify(userReviews));
+  openModal(phoneId);
+  showToast('✓ Review posted!');
+}
+
+function voteReview(phoneId, reviewId, btn) {
+  const reviews = userReviews[phoneId] || [];
+  const r = reviews.find(x => x.id === reviewId);
+  if (r) { r.likes = (r.likes || 0) + 1; localStorage.setItem('pg_reviews', JSON.stringify(userReviews)); }
+  btn.classList.add('liked');
+  btn.textContent = `👍 ${r?.likes||1}`;
+}
+
+// ══════════════════════════════════════════════════════
+//  PRICE ALERTS
+// ══════════════════════════════════════════════════════
+function togglePriceAlert(id, btn) {
+  if (priceAlerts.includes(id)) {
+    priceAlerts = priceAlerts.filter(x => x !== id);
+    btn.textContent = '🔔 Alert me on price drop';
+    btn.classList.remove('active');
+    showToast('Price alert removed');
+  } else {
+    priceAlerts.push(id);
+    btn.textContent = '🔔 Alert set';
+    btn.classList.add('active');
+    showToast('🔔 Price alert set! We\'ll notify you on drops.');
+  }
+  localStorage.setItem('pg_alerts', JSON.stringify(priceAlerts));
+}
+
+// ══════════════════════════════════════════════════════
+//  COMPARE
+// ══════════════════════════════════════════════════════
+function toggleCompare(id) {
+  if (compareList.includes(id)) {
+    compareList = compareList.filter(x => x !== id);
+  } else {
+    if (compareList.length >= 4) { showToast('Max 4 phones to compare'); return; }
+    compareList.push(id);
+    showToast('Added to compare');
+  }
+  updateCompareBar();
+  filterPhones();
+  renderComparePickGrid();
+  updateComparePage();
+}
+
+function updateCompareBar() {
+  const bar = document.getElementById('compareBar');
+  const items = document.getElementById('compareItems');
+  if (compareList.length > 0) {
+    bar.classList.add('visible');
+    items.innerHTML = compareList.map(id => {
+      const p = PHONES.find(x => x.id === id);
+      return `<div class="compare-chip">${p.brand} ${p.name}<button onclick="toggleCompare(${id})">✕</button></div>`;
+    }).join('');
+  } else {
+    bar.classList.remove('visible');
+  }
+}
+
+function clearCompare() {
+  compareList = [];
+  updateCompareBar();
+  filterPhones();
+  renderComparePickGrid();
+  updateComparePage();
+}
+
+function renderComparePickGrid() {
+  const grid = document.getElementById('comparePickGrid');
+  if (grid) grid.innerHTML = PHONES.map(p => buildCard(p, true)).join('');
+}
+
+function updateComparePage() {
+  const sel = document.getElementById('comparePageSelected');
+  const btn = document.getElementById('compareNowBtn');
+  if (!sel) return;
+  if (!compareList.length) {
+    sel.innerHTML = '<div style="color:var(--muted);font-size:0.85rem">No phones selected yet — click "+ Compare" on any phone below</div>';
+    if (btn) btn.disabled = true;
+    return;
+  }
+  if (btn) btn.disabled = compareList.length < 2;
+  sel.innerHTML = compareList.map(id => {
+    const p = PHONES.find(x => x.id === id);
+    return `<div class="compare-chip">${p.brand} ${p.name}<button onclick="toggleCompare(${id})">✕</button></div>`;
+  }).join('');
+}
+
+function openCompareModal() {
+  if (compareList.length < 2) { showToast('Select at least 2 phones'); return; }
+  const phones = compareList.map(id => PHONES.find(x => x.id === id));
+  const specs = ['brand','name','ugx','ram','storage','camera','battery','network','chipset','display'];
+  const labels = {brand:'Brand',name:'Model',ugx:'Price (USD)',ram:'RAM (GB)',storage:'Storage',camera:'Camera',battery:'Battery (mAh)',network:'Network',chipset:'Chipset',display:'Display'};
+
+  // Find best values
+  const best = {};
+  ['ram','battery'].forEach(k => {
+    best[k] = Math.max(...phones.map(p => +p[k]));
+  });
+  best['ugx'] = Math.min(...phones.map(p => +p.ugx)); // lowest price is best
+
+  const html = `
+    <div class="compare-grid">
+      ${phones.map(p => `
+        <div class="compare-col">
+          <div class="compare-col-brand">${p.brand}</div>
+          <div class="compare-col-name">${p.name}</div>
+          ${specs.slice(2).map(k => {
+            const isBest = (k==='ugx' ? p[k]===best[k] : (best[k]!==undefined && +p[k]===best[k]));
+            const val = k==='ugx' ? '$'+p.price : p[k];
+            return `<div class="compare-row">
+              <div class="compare-row-key">${labels[k]}</div>
+              <div class="compare-row-val ${isBest?'best':''}">${val}${isBest?` ✓`:''}</div>
+            </div>`;
+          }).join('')}
+        </div>`).join('')}
+    </div>
+    <div class="compare-ai-summary" id="compareAISummary">
+      <div class="compare-ai-title">✦ AI Summary</div>
+      <div class="compare-ai-text" id="compareAIText">
+        <button class="btn-primary" style="font-size:0.82rem;padding:9px 18px" onclick="getCompareSummary()">✦ Generate AI Summary</button>
+      </div>
+    </div>`;
+  document.getElementById('compareModalBody').innerHTML = html;
+  document.getElementById('compareOverlay').classList.add('open');
+}
+
+async function getCompareSummary() {
+  const phones = compareList.map(id => PHONES.find(x => x.id === id));
+  const textEl = document.getElementById('compareAIText');
+  textEl.innerHTML = '<span class="ai-typing">Analyzing phones</span>';
+  const prompt = `Compare these phones for a global buyer. Be concise and direct. Phones: ${phones.map(p=>`${p.brand} ${p.name} ($${p.price}, ${p.ram}GB RAM, ${p.camera} camera, ${p.battery}mAh, ${p.network})`).join(' vs ')}. Who should buy each one?`;
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:500,messages:[{role:'user',content:prompt}]})});
+    const data = await res.json();
+    textEl.textContent = data.content?.[0]?.text || 'Could not generate summary.';
+  } catch(e) { textEl.textContent = 'AI summary unavailable right now.'; }
+}
+
+// ══════════════════════════════════════════════════════
+//  AI RECOMMENDER
+// ══════════════════════════════════════════════════════
+function openAIModal() { document.getElementById('aiOverlay').classList.add('open'); }
+function closeAIModal() { document.getElementById('aiOverlay').classList.remove('open'); }
+function setAIPrompt(txt) { document.getElementById('aiInput').value = txt; }
+
+async function getAIRecommendation() {
+  const input = document.getElementById('aiInput').value.trim();
+  if (!input) { showToast('Please describe what you\'re looking for'); return; }
+  const btn = document.getElementById('aiBtn');
+  const btnText = document.getElementById('aiBtnText');
+  const result = document.getElementById('aiResult');
+  const resultText = document.getElementById('aiResultText');
+  btn.disabled = true;
+  btnText.textContent = 'Finding your match…';
+  result.classList.add('visible');
+  resultText.innerHTML = '<span class="ai-typing">Searching catalog</span>';
+  const catalog = PHONES.map(p=>`${p.brand} ${p.name}: $${p.price}, ${p.ram}GB RAM, ${p.camera} cam, ${p.battery}mAh, ${p.network}, ${p.chipset}`).join('\n');
+  const prompt = `You are a phone expert for PhoneGrid. Recommend from this catalog only.\n\nCATALOG:\n${catalog}\n\nUSER REQUEST: ${input}\n\nGive a clear recommendation with reasoning. Mention the USD price. Keep it concise (3-5 sentences).`;
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:400,messages:[{role:'user',content:prompt}]})});
+    const data = await res.json();
+    resultText.classList.add('ai-typing');
+    const text = data.content?.[0]?.text || 'Could not find a recommendation.';
+    resultText.classList.remove('ai-typing');
+    resultText.textContent = text;
+  } catch(e) { resultText.textContent = 'AI service unavailable. Please try again.'; }
+  btn.disabled = false;
+  btnText.textContent = '✦ Find My Perfect Phone';
+}
+
+// ══════════════════════════════════════════════════════
+//  AUTH
+// ══════════════════════════════════════════════════════
+function openAuthModal(tab) {
+  switchAuthTab(tab || 'login');
+  document.getElementById('authOverlay').classList.add('open');
+}
+function closeAuthModal() { document.getElementById('authOverlay').classList.remove('open'); }
+
+function switchAuthTab(tab) {
+  currentAuthTab = tab;
+  document.getElementById('authTabLogin').classList.toggle('active', tab==='login');
+  document.getElementById('authTabSignup').classList.toggle('active', tab==='signup');
+  document.getElementById('authNameGroup').style.display = tab==='signup' ? 'flex' : 'none';
+  document.getElementById('authTitle').textContent = tab==='login' ? 'Welcome back' : 'Create account';
+  document.getElementById('authSub').textContent = tab==='login' ? 'Sign in to access your saved phones and alerts.' : 'Join free to save phones, track prices & get alerts.';
+  document.getElementById('authSubmit').textContent = tab==='login' ? 'Sign In' : 'Create Account';
+}
+
+function handleAuth() {
+  const email = document.getElementById('authEmail').value.trim();
+  const pass = document.getElementById('authPassword').value;
+  const name = document.getElementById('authName')?.value?.trim() || email.split('@')[0];
+  if (!email || !pass) { showToast('Please fill all fields'); return; }
+  const user = { email, name: currentAuthTab==='signup' ? name : name, initial: (name[0]||'U').toUpperCase() };
+  currentUser = user;
+  localStorage.setItem('pg_user', JSON.stringify(user));
+  updateAuthUI();
+  closeAuthModal();
+  showToast(`✓ Welcome${currentAuthTab==='signup'?' to PhoneGrid':' back'}, ${user.name}!`);
+}
+
+function handleGuestAuth() {
+  currentUser = { email: 'guest', name: 'Guest', initial: 'G' };
+  closeAuthModal();
+  showToast('Browsing as guest');
+}
+
+function logout() {
+  currentUser = null;
+  localStorage.removeItem('pg_user');
+  updateAuthUI();
+  toggleUserMenu();
+  showToast('Signed out');
+}
+
+function updateAuthUI() {
+  const loginBtn = document.getElementById('loginBtn');
+  const signupBtn = document.getElementById('signupBtn');
+  const avatar = document.getElementById('userAvatar');
+  if (currentUser) {
+    loginBtn.style.display = 'none';
+    signupBtn.style.display = 'none';
+    avatar.style.display = 'flex';
+    avatar.textContent = currentUser.initial;
+  } else {
+    loginBtn.style.display = '';
+    signupBtn.style.display = '';
+    avatar.style.display = 'none';
+  }
+}
+
+function toggleUserMenu() {
+  document.getElementById('userMenu').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  if (!document.getElementById('navUserWrap')?.contains(e.target))
+    document.getElementById('userMenu')?.classList.remove('open');
+});
+
+// ══════════════════════════════════════════════════════
+//  CART
+// ══════════════════════════════════════════════════════
+function addToCart(id) {
+  const p = PHONES.find(x => x.id === id);
+  if (!p) return;
+  if (cart.find(x => x.id === id)) { showToast('Already in cart'); return; }
+  cart.push({ id, name: `${p.brand} ${p.name}`, ugx: p.price, price: p.price });
+  localStorage.setItem('pg_cart', JSON.stringify(cart));
+  updateCartCount();
+  showToast('🛒 Added to cart!');
+}
+
+function updateCartCount() {
+  document.getElementById('cartCount').textContent = cart.length;
+}
+
+function openCart() {
+  const itemsEl = document.getElementById('cartItems');
+  const footer = document.getElementById('cartFooter');
+  if (!cart.length) {
+    itemsEl.innerHTML = '<div class="cart-empty"><span class="cart-empty-icon">🛍️</span><div>Your cart is empty</div></div>';
+    footer.style.display = 'none';
+  } else {
+    itemsEl.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <div class="cart-item-img">📱</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">$${item.price || item.ugx}</div>
+        </div>
+        <button class="cart-item-remove" onclick="removeFromCart(${item.id})">✕</button>
+      </div>`).join('');
+    const total = cart.reduce((s,x)=>s+(x.price||x.ugx),0);
+    document.getElementById('cartTotal').textContent = '$'+total.toLocaleString();
+    document.getElementById('payTotal').textContent = '$'+total.toLocaleString();
+    footer.style.display = 'block';
+  }
+  document.getElementById('cartOverlay').classList.add('open');
+}
+
+function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); }
+
+function removeFromCart(id) {
+  cart = cart.filter(x => x.id !== id);
+  localStorage.setItem('pg_cart', JSON.stringify(cart));
+  updateCartCount();
+  openCart();
+}
+
+function openPaymentModal() {
+  closeCart();
+  document.getElementById('paymentOverlay').classList.add('open');
+}
+
+function selectPayment(el, method) {
+  document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPaymentMethod = method;
+}
+
+function processPayment() {
+  const num = document.getElementById('momoNumber').value.trim();
+  if (!num) { showToast('Enter your mobile money number'); return; }
+  document.getElementById('paymentOverlay').classList.remove('open');
+  cart = [];
+  localStorage.setItem('pg_cart', JSON.stringify(cart));
+  updateCartCount();
+  showToast(`✓ Payment processed via ${selectedPaymentMethod==='card'?'Credit/Debit Card':'PayPal'}! Thank you for your order.`);
+}
+
+// ══════════════════════════════════════════════════════
+//  KAMPALA DEALS
+// ══════════════════════════════════════════════════════
+function renderKampalaDeals() {
+  const grid = document.getElementById('kampalaDealsGrid');
+  if (!grid) return;
+  const deals = PHONES.filter(p => p.priceDrop || p.badge === 'DEAL' || p.ugx < 1500000).slice(0, 6);
+  grid.innerHTML = deals.map(p => buildCard(p, false)).join('');
+}
+
+// ══════════════════════════════════════════════════════
+//  ADMIN DASHBOARD
+// ══════════════════════════════════════════════════════
+function renderAdminDashboard() {
+  const mostViewed = [
+    {name:'Galaxy S25 Ultra', views:312}, {name:'iPhone 16 Pro Max', views:287}, {name:'iPhone 16 Pro', views:201}, {name:'Galaxy S25+', views:189},
+    {name:'Spark 30 Pro', views:198}, {name:'Pixel 9 Pro', views:154}, {name:'Redmi Note 14', views:129}
+  ];
+  const mostSearched = [
+    {name:'Samsung Galaxy', count:412}, {name:'Apple iPhone', count:388},
+    {name:'Tecno', count:201}, {name:'Xiaomi', count:167}, {name:'Infinix', count:144}
+  ];
+  const mvMax = mostViewed[0].views;
+  document.getElementById('mostViewedBars').innerHTML = mostViewed.map(x =>
+    `<div class="bar-item"><div class="bar-label">${x.name}</div><div class="bar-track"><div class="bar-fill" style="width:${(x.views/mvMax*100).toFixed(0)}%"></div></div><div class="bar-val">${x.views}</div></div>`
+  ).join('');
+  const msMax = mostSearched[0].count;
+  document.getElementById('mostSearchedBars').innerHTML = mostSearched.map(x =>
+    `<div class="bar-item"><div class="bar-label">${x.name}</div><div class="bar-track"><div class="bar-fill" style="width:${(x.count/msMax*100).toFixed(0)}%"></div></div><div class="bar-val">${x.count}</div></div>`
+  ).join('');
+  const orders = [
+    {id:'#1042',phone:'Galaxy S25 Ultra',customer:'John Smith',amount:'$1,299',method:'Credit Card',status:'Delivered'},
+    {id:'#1041',phone:'Tecno Spark 30',customer:'Sarah Johnson',amount:'$199',method:'Airtel Money',status:'Processing'},
+    {id:'#1040',phone:'iPhone 16',customer:'David Chen',amount:'$799',method:'PayPal',status:'Shipped'},
+    {id:'#1039',phone:'Redmi Note 14',customer:'Grace Williams',amount:'$349',method:'Airtel Money',status:'Delivered'},
+  ];
+  document.getElementById('ordersTable').innerHTML = orders.map(o =>
+    `<tr><td style="color:var(--accent)">${o.id}</td><td>${o.phone}</td><td>${o.customer}</td><td>$${o.amount.replace('$','')}</td><td>${o.method}</td><td><span style="background:${o.status==='Delivered'?'rgba(74,222,128,0.1)':o.status==='Shipped'?'rgba(124,110,255,0.1)':'rgba(251,191,36,0.1)'};border:1px solid ${o.status==='Delivered'?'rgba(74,222,128,0.3)':o.status==='Shipped'?'rgba(124,110,255,0.3)':'rgba(251,191,36,0.3)'};color:${o.status==='Delivered'?'var(--success)':o.status==='Shipped'?'var(--accent)':'var(--warning)'};padding:3px 10px;border-radius:100px;font-size:0.72rem">${o.status}</span></td></tr>`
+  ).join('');
+}
+
+// ══════════════════════════════════════════════════════
+//  IMAGE MANAGER
+// ══════════════════════════════════════════════════════
+const BRAND_MODELS = {
+  Samsung:['Galaxy S25 Ultra','Galaxy S25+','Galaxy S25','Galaxy Z Fold 6','Galaxy Z Flip 6','Galaxy A55','Galaxy A35','Galaxy A15','Galaxy S24 FE','Galaxy M55'],
+  Apple:['iPhone 16 Pro Max','iPhone 16 Pro','iPhone 16','iPhone 16 Plus','iPhone 15 Pro Max','iPhone 15','iPhone SE','iPhone 14'],
+  Google:['Pixel 9 Pro'],
+  OnePlus:['13'],
+  Xiaomi:['14 Ultra','Redmi Note 14 Pro'],
+  Tecno:['Spark 30 Pro','Camon 30 Pro'],
+  Infinix:['Hot 50 Pro','Zero 40 5G'],
+  Realme:['GT 7 Pro'],
+  Sony:['Xperia 1 VI'],
+  Nokia:['G42 5G']
+};
+
+function updateModelSelect() {
+  const brand = document.getElementById('uploadBrand').value;
+  const sel = document.getElementById('uploadModel');
+  sel.innerHTML = '<option value="">Select model…</option>';
+  if (brand && BRAND_MODELS[brand]) {
+    BRAND_MODELS[brand].forEach(m => {
+      const o = document.createElement('option'); o.value = m; o.textContent = m; sel.appendChild(o);
+    });
+  }
+}
+
+function openUploadModal() {
+  document.getElementById('uploadOverlay').classList.add('open');
+  selectedFiles = [];
+  document.getElementById('previewArea').classList.remove('visible');
+  document.getElementById('previewGrid').innerHTML = '';
+  document.getElementById('uploadMessage').className = 'upload-message';
+  document.getElementById('uploadMessage').style.display = 'none';
+  document.getElementById('uploadProgress').classList.remove('visible');
+}
+
+function closeUploadModal() {
+  document.getElementById('uploadOverlay').classList.remove('open');
+  selectedFiles = [];
+}
+
+function handleDragOver(e) { e.preventDefault(); document.getElementById('dropZone').classList.add('drag-over'); }
+function handleDragLeave() { document.getElementById('dropZone').classList.remove('drag-over'); }
+function handleDrop(e) { e.preventDefault(); document.getElementById('dropZone').classList.remove('drag-over'); processFiles(e.dataTransfer.files); }
+function handleFileSelect(e) { processFiles(e.target.files); }
+
+function processFiles(files) {
+  const valid = Array.from(files).filter(f => f.type.match(/image\/(jpeg|png|webp)/));
+  if (!valid.length) { showUploadMsg('error', 'Please select JPG, PNG, or WEBP files only'); return; }
+  selectedFiles = [...selectedFiles, ...valid].slice(0, 10);
+  renderFilePreviews();
+}
+
+function renderFilePreviews() {
+  const grid = document.getElementById('previewGrid');
+  const area = document.getElementById('previewArea');
+  document.getElementById('previewCount').textContent = selectedFiles.length;
+  grid.innerHTML = '';
+  area.classList.add('visible');
+  selectedFiles.forEach((f, i) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const item = document.createElement('div');
+      item.className = 'preview-item';
+      item.innerHTML = `<img src="${e.target.result}" alt=""><button class="preview-remove" onclick="removePreview(${i})">✕</button>`;
+      grid.appendChild(item);
+    };
+    reader.readAsDataURL(f);
+  });
+}
+
+function removePreview(i) {
+  selectedFiles.splice(i, 1);
+  if (selectedFiles.length) renderFilePreviews();
+  else { document.getElementById('previewArea').classList.remove('visible'); }
+}
+
+function selectImgType(el) {
+  document.querySelectorAll('.img-type-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  currentImgType = el.dataset.type;
+}
+
+function showUploadMsg(type, text) {
+  const el = document.getElementById('uploadMessage');
+  el.className = `upload-message ${type} visible`;
+  el.style.display = 'block';
+  el.textContent = text;
+}
+
+async function submitUpload() {
+  if (!selectedFiles.length) { showUploadMsg('error','Please select at least one image'); return; }
+  const brand = document.getElementById('uploadBrand').value;
+  const model = document.getElementById('uploadModel').value;
+  if (!brand || !model) { showUploadMsg('error','Please select a brand and model'); return; }
+
+  const btn = document.getElementById('uploadSubmitBtn');
+  btn.disabled = true;
+  document.getElementById('uploadSubmitText').textContent = 'Saving…';
+  const progress = document.getElementById('uploadProgress');
+  progress.classList.add('visible');
+  const fileList = document.getElementById('progressFileList');
+  fileList.innerHTML = selectedFiles.map(f => `<div class="progress-file"><span class="progress-file-icon">🖼</span><span class="progress-file-name">${f.name}</span><span class="progress-file-status" id="pfs-${f.name.replace(/\W/g,'_')}">Processing…</span></div>`).join('');
+
+  for (let i = 0; i < selectedFiles.length; i++) {
+    const f = selectedFiles[i];
+    const statusEl = document.getElementById('pfs-'+f.name.replace(/\W/g,'_'));
+    await new Promise(res => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        uploadedImages.push({
+          id: Date.now()+i, brand, model, type: currentImgType,
+          dataUrl: e.target.result, filename: f.name,
+          size: (f.size/1024/1024).toFixed(2)+'MB',
+          date: new Date().toLocaleDateString('en-US')
+        });
+        if (statusEl) { statusEl.textContent = '✓ Done'; statusEl.className = 'progress-file-status status-done'; }
+        const pct = Math.round(((i+1)/selectedFiles.length)*100);
+        document.getElementById('progressFill').style.width = pct+'%';
+        document.getElementById('progressPercent').textContent = pct+'%';
+        res();
+      };
+      reader.readAsDataURL(f);
+    });
+  }
+
+  localStorage.setItem('pg_images', JSON.stringify(uploadedImages));
+  showUploadMsg('success', `✓ ${selectedFiles.length} image(s) saved successfully!`);
+  btn.disabled = false;
+  document.getElementById('uploadSubmitText').textContent = '↑ Save Images';
+  renderImages();
+  updateImgStats();
+  document.getElementById('statImgCount').textContent = uploadedImages.length;
+  filterPhones();
+  renderComparePickGrid();
+}
+
+function renderImages() {
+  const catalog = document.getElementById('imgCatalog');
+  const empty = document.getElementById('imgEmptyState');
+  if (!catalog) return;
+  const q = document.getElementById('imgSearch')?.value?.toLowerCase() || '';
+  let imgs = uploadedImages;
+  if (imgFilter !== 'all') imgs = imgs.filter(x => x.type === imgFilter);
+  if (q) imgs = imgs.filter(x => (x.brand+x.model).toLowerCase().includes(q));
+  if (!imgs.length) { catalog.innerHTML = ''; empty.style.display = 'block'; updateImgStats(); return; }
+  empty.style.display = 'none';
+  catalog.innerHTML = imgs.map(img => `
+    <div class="img-catalog-item" id="img-${img.id}">
+      <div class="img-catalog-thumb" onclick="openImgLightbox(${img.id})">
+        <img src="${img.dataUrl}" alt="${img.model}">
+        <div class="img-type-badge">${img.type}</div>
+        ${bulkMode ? `<div class="img-select-check"><input type="checkbox" onchange="toggleBulkSelect(${img.id},this)" ${bulkSelected.includes(img.id)?'checked':''}></div>` : ''}
+        <div class="img-catalog-actions">
+          <button class="img-action-btn" title="View" onclick="openImgLightbox(${img.id})">🔍</button>
+          <button class="img-action-btn img-action-delete" title="Delete" onclick="event.stopPropagation();deleteImage(${img.id})">🗑</button>
+        </div>
+      </div>
+      <div class="img-catalog-info">
+        <div class="img-catalog-brand">${img.brand}</div>
+        <div class="img-catalog-phone">${img.model}</div>
+        <div class="img-catalog-meta">
+          <span class="img-catalog-size">${img.size}</span>
+          <span class="img-catalog-date">${img.date}</span>
+        </div>
+      </div>
+    </div>`).join('');
+  updateImgStats();
+}
+
+function updateImgStats() {
+  document.getElementById('is-total').textContent = uploadedImages.length;
+  const phones = new Set(uploadedImages.map(x=>x.model));
+  document.getElementById('is-phones').textContent = phones.size;
+  const totalMB = uploadedImages.reduce((s,x)=>s+(parseFloat(x.size)||0),0);
+  document.getElementById('is-storage').textContent = totalMB.toFixed(1)+' MB';
+  const brands = new Set(uploadedImages.map(x=>x.brand));
+  document.getElementById('is-brands').textContent = brands.size;
+}
+
+function setImgFilter(type, el) {
+  imgFilter = type;
+  document.querySelectorAll('.img-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderImages();
+}
+
+function filterImages() { renderImages(); }
+
+function deleteImage(id) {
+  uploadedImages = uploadedImages.filter(x => x.id !== id);
+  localStorage.setItem('pg_images', JSON.stringify(uploadedImages));
+  renderImages();
+  filterPhones();
+  renderComparePickGrid();
+  showToast('Image deleted');
+}
+
+function openImgLightbox(id) {
+  const img = uploadedImages.find(x => x.id === id);
+  if (!img) return;
+  const allImgs = uploadedImages.filter(x => x.brand===img.brand && x.model===img.model);
+  currentLightboxImages = allImgs;
+  currentLightboxIndex = allImgs.findIndex(x=>x.id===id);
+  showLightbox();
+}
+
+function openLightbox(imgs, idx) {
+  currentLightboxImages = imgs.map(img => ({...img, dataUrl: img.dataUrl}));
+  currentLightboxIndex = idx;
+  showLightbox();
+}
+
+function showLightbox() {
+  const img = currentLightboxImages[currentLightboxIndex];
+  if (!img) return;
+  document.getElementById('lightboxImg').src = img.dataUrl;
+  document.getElementById('lightboxInfo').textContent = `${img.brand} ${img.model} — ${img.type} (${currentLightboxIndex+1}/${currentLightboxImages.length})`;
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+
+function lightboxNav(dir) {
+  currentLightboxIndex = (currentLightboxIndex + dir + currentLightboxImages.length) % currentLightboxImages.length;
+  showLightbox();
+}
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key==='Escape') closeLightbox();
+    if (e.key==='ArrowLeft') lightboxNav(-1);
+    if (e.key==='ArrowRight') lightboxNav(1);
+  }
+  if (e.key==='Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));
+    document.getElementById('cartOverlay')?.classList.remove('open');
+  }
+});
+
+function toggleBulkMode() {
+  bulkMode = !bulkMode;
+  bulkSelected = [];
+  document.getElementById('bulkToolbar').classList.toggle('visible', bulkMode);
+  document.getElementById('bulkSelectToggle').textContent = bulkMode ? '✕ Cancel Selection' : '☑ Select Multiple';
+  renderImages();
+}
+
+function toggleBulkSelect(id, cb) {
+  if (cb.checked) bulkSelected.push(id); else bulkSelected = bulkSelected.filter(x=>x!==id);
+  document.getElementById('bulkCount').textContent = `${bulkSelected.length} images selected`;
+}
+
+function bulkDelete() {
+  if (!bulkSelected.length) return;
+  uploadedImages = uploadedImages.filter(x=>!bulkSelected.includes(x.id));
+  localStorage.setItem('pg_images', JSON.stringify(uploadedImages));
+  bulkSelected = [];
+  bulkMode = false;
+  document.getElementById('bulkToolbar').classList.remove('visible');
+  renderImages();
+  filterPhones();
+  showToast('Images deleted');
+}
+
+// ══════════════════════════════════════════════════════
+//  TOAST
+// ══════════════════════════════════════════════════════
+let toastTimeout;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => t.classList.remove('show'), 3000);
+}
+</script>
+
+<!-- ══════════════════════════════════════════
+     ADMIN EDIT MODE — Floating Button + Banner
+═══════════════════════════════════════════════ -->
+<div id="editModeBanner">✏️ Edit Mode Active — Click any highlighted text to edit it. Hit Save when done.</div>
+
+<div id="editModeFAB">
+  <div id="editClearBtn" onclick="clearEditSaves()">🗑 Clear Saved Edits</div>
+  <button id="editSaveBtn" onclick="saveEdits()">💾 Save Changes</button>
+  <button id="editToggleBtn" onclick="toggleEditMode()">✏️ Admin Edit Mode</button>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════
+//  ADMIN EDIT MODE
+// ══════════════════════════════════════════════════════
+const EDIT_STORAGE_KEY = 'isamstore_edits_v1';
+let editModeActive = false;
+
+// ── Selectors for all editable text regions ──
+const EDITABLE_SELECTORS = [
+  // Hero
+  '.hero-title', '.hero-sub', '.ugx-badge',
+  // Nav
+  '.logo',
+  // Section headers
+  '.section-title', '.section-sub',
+  // Footer
+  'footer',
+  // Page tabs
+  '.page-tab',
+  // Filter bar labels
+  '.search-filter-block label',
+  // Phone cards (rendered dynamically — handled via MutationObserver)
+  '.card-name', '.card-brand', '.card-spec-val', '.card-badge',
+  // Modal content
+  '.modal-name', '.modal-sub', '.modal-badge',
+  // AI section
+  '.ai-title', '.ai-sub', '.ai-chip',
+  // Admin headings
+  '.admin-title', '.admin-sub', '.stat-label', '.stat-val',
+  // Compare
+  '.compare-title',
+  // Recently viewed
+  '.rv-section-title',
+  // Price label
+  '#priceLabel',
+  // Breadcrumb
+  '.breadcrumb',
+  // Category tabs
+  '.cat-tab',
+  // Sort / filter labels
+  '.price-label',
+];
+
+function markEditables() {
+  EDITABLE_SELECTORS.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+      // Skip elements that are inputs or buttons
+      if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'BUTTON' || el.tagName === 'TEXTAREA') return;
+      if (!el.dataset.editId) {
+        // Create a stable ID from selector + index
+        const idx = [...document.querySelectorAll(sel)].indexOf(el);
+        el.dataset.editId = (sel + ':' + idx).replace(/[^a-zA-Z0-9_\-:]/g, '_');
+        el.dataset.editable = '1';
+      }
+    });
+  });
+}
+
+function enableEditMode() {
+  markEditables();
+  document.querySelectorAll('[data-editable]').forEach(el => {
+    el.contentEditable = 'true';
+  });
+  document.body.classList.add('edit-mode');
+  document.getElementById('editModeBanner').classList.add('visible');
+  document.getElementById('editToggleBtn').classList.add('active');
+  document.getElementById('editToggleBtn').textContent = '✋ Exit Edit Mode';
+  document.getElementById('editSaveBtn').classList.add('visible');
+  document.getElementById('editClearBtn').classList.add('visible');
+}
+
+function disableEditMode() {
+  document.querySelectorAll('[data-editable]').forEach(el => {
+    el.contentEditable = 'false';
+  });
+  document.body.classList.remove('edit-mode');
+  document.getElementById('editModeBanner').classList.remove('visible');
+  document.getElementById('editToggleBtn').classList.remove('active');
+  document.getElementById('editToggleBtn').innerHTML = '✏️ Admin Edit Mode';
+  document.getElementById('editSaveBtn').classList.remove('visible');
+  document.getElementById('editClearBtn').classList.remove('visible');
+}
+
+function toggleEditMode() {
+  editModeActive = !editModeActive;
+  editModeActive ? enableEditMode() : disableEditMode();
+}
+
+// ── Save: collect all [data-editable] innerHTML → localStorage ──
+function saveEdits() {
+  const saved = JSON.parse(localStorage.getItem(EDIT_STORAGE_KEY) || '{}');
+  let count = 0;
+  document.querySelectorAll('[data-editable]').forEach(el => {
+    if (el.dataset.editId) {
+      saved[el.dataset.editId] = el.innerHTML;
+      count++;
+    }
+  });
+  localStorage.setItem(EDIT_STORAGE_KEY, JSON.stringify(saved));
+  showToast(`✅ ${count} edits saved to browser storage!`);
+}
+
+// ── Restore saved edits on page load ──
+function restoreEdits() {
+  const saved = JSON.parse(localStorage.getItem(EDIT_STORAGE_KEY) || '{}');
+  if (!Object.keys(saved).length) return;
+  // Mark editables first so IDs exist
+  markEditables();
+  document.querySelectorAll('[data-editable]').forEach(el => {
+    if (el.dataset.editId && saved[el.dataset.editId] !== undefined) {
+      el.innerHTML = saved[el.dataset.editId];
+    }
+  });
+}
+
+// ── Clear saved edits ──
+function clearEditSaves() {
+  if (!confirm('Clear all saved edits and restore original text?')) return;
+  localStorage.removeItem(EDIT_STORAGE_KEY);
+  showToast('🗑 Saved edits cleared — refresh to see original text.');
+}
+
+// ── MutationObserver: re-mark editables when dynamic cards render ──
+const editObserver = new MutationObserver(() => {
+  if (editModeActive) {
+    markEditables();
+    document.querySelectorAll('[data-editable]').forEach(el => {
+      el.contentEditable = 'true';
+    });
+  }
+});
+editObserver.observe(document.body, { childList: true, subtree: true });
+
+// ── Restore edits after DOM + dynamic content settles ──
+window.addEventListener('load', () => {
+  setTimeout(restoreEdits, 600);
+});
+
+// ══════════════════════════════════════════════════════
+//  PHONE SPEC EDITOR
+// ══════════════════════════════════════════════════════
+const SPEC_STORAGE_KEY = 'iSam_phoneSpecs_v1';
+let specEditorData = []; // working copy
+let specHasUnsaved = false;
+
+// Load saved specs or fall back to PHONES default
+function loadSpecData() {
+  try {
+    const saved = localStorage.getItem(SPEC_STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length) {
+        // Merge saved into PHONES array in place so rest of app reflects edits
+        parsed.forEach(savedPhone => {
+          const idx = PHONES.findIndex(p => p.id === savedPhone.id);
+          if (idx !== -1) Object.assign(PHONES[idx], savedPhone);
+          else PHONES.push(savedPhone); // newly added phones
+        });
+        // Remove phones marked for deletion
+        const deletedIds = JSON.parse(localStorage.getItem(SPEC_STORAGE_KEY + '_deleted') || '[]');
+        deletedIds.forEach(id => {
+          const di = PHONES.findIndex(p => p.id === id);
+          if (di !== -1) PHONES.splice(di, 1);
+        });
+      }
+    }
+  } catch(e) {}
+  specEditorData = PHONES.map(p => ({...p}));
+}
+
+function renderSpecTable() {
+  const tbody = document.getElementById('specTableBody');
+  if (!tbody) return;
+  tbody.innerHTML = specEditorData.map((p, i) => `
+    <tr data-spec-idx="${i}">
+      <td style="color:var(--muted);font-family:'Space Mono',monospace;font-size:0.68rem">${p.id}</td>
+      <td>
+        <select class="spec-select" onchange="specFieldChange(${i},'brand',this.value);specFieldChange(${i},'ugx',document.querySelector('[data-spec-idx=\\'${i}\\'] .price-inp').value)">
+          <option value="Apple" ${p.brand==='Apple'?'selected':''}>🍎 Apple</option>
+          <option value="Samsung" ${p.brand==='Samsung'?'selected':''}>🔷 Samsung</option>
+          <option value="Google" ${p.brand==='Google'?'selected':''}>Google</option>
+          <option value="OnePlus" ${p.brand==='OnePlus'?'selected':''}>OnePlus</option>
+          <option value="Xiaomi" ${p.brand==='Xiaomi'?'selected':''}>Xiaomi</option>
+          <option value="Tecno" ${p.brand==='Tecno'?'selected':''}>Tecno</option>
+          <option value="Infinix" ${p.brand==='Infinix'?'selected':''}>Infinix</option>
+          <option value="Realme" ${p.brand==='Realme'?'selected':''}>Realme</option>
+          <option value="Sony" ${p.brand==='Sony'?'selected':''}>Sony</option>
+          <option value="Nokia" ${p.brand==='Nokia'?'selected':''}>Nokia</option>
+        </select>
+      </td>
+      <td><input class="spec-input wide" value="${escHtml(p.name)}" oninput="specFieldChange(${i},'name',this.value)" placeholder="Phone name"></td>
+      <td><input class="spec-input narrow price-inp" type="number" value="${p.price}" min="0" oninput="specFieldChange(${i},'price',+this.value);specFieldChange(${i},'ugx',+this.value)" placeholder="Price"></td>
+      <td><input class="spec-input narrow" type="number" value="${p.ram}" min="1" oninput="specFieldChange(${i},'ram',+this.value)" placeholder="RAM"></td>
+      <td><input class="spec-input medium" value="${escHtml(p.storage)}" oninput="specFieldChange(${i},'storage',this.value)" placeholder="e.g. 128GB"></td>
+      <td><input class="spec-input medium" value="${escHtml(p.camera)}" oninput="specFieldChange(${i},'camera',this.value)" placeholder="e.g. 48MP"></td>
+      <td><input class="spec-input narrow" type="number" value="${p.battery}" min="0" oninput="specFieldChange(${i},'battery',+this.value)" placeholder="mAh"></td>
+      <td>
+        <select class="spec-select" onchange="specFieldChange(${i},'network',this.value)">
+          <option value="5G" ${p.network==='5G'?'selected':''}>5G</option>
+          <option value="4G" ${p.network==='4G'?'selected':''}>4G</option>
+        </select>
+      </td>
+      <td><input class="spec-input wide" value="${escHtml(p.chipset)}" oninput="specFieldChange(${i},'chipset',this.value)" placeholder="Chipset"></td>
+      <td><input class="spec-input wide" value="${escHtml(p.display)}" oninput="specFieldChange(${i},'display',this.value)" placeholder="Display"></td>
+      <td>
+        <select class="spec-select" onchange="specFieldChange(${i},'category',this.value)">
+          <option value="flagship" ${p.category==='flagship'?'selected':''}>Flagship</option>
+          <option value="midrange" ${p.category==='midrange'?'selected':''}>Mid-range</option>
+          <option value="budget" ${p.category==='budget'?'selected':''}>Budget</option>
+          <option value="foldable" ${p.category==='foldable'?'selected':''}>Foldable</option>
+        </select>
+      </td>
+      <td>
+        <select class="spec-select" onchange="specFieldChange(${i},'badge',this.value)">
+          <option value="" ${!p.badge?'selected':''}>None</option>
+          <option value="NEW" ${p.badge==='NEW'?'selected':''}>NEW</option>
+          <option value="HOT" ${p.badge==='HOT'?'selected':''}>HOT</option>
+          <option value="DEAL" ${p.badge==='DEAL'?'selected':''}>DEAL</option>
+          <option value="VALUE" ${p.badge==='VALUE'?'selected':''}>VALUE</option>
+          <option value="POPULAR" ${p.badge==='POPULAR'?'selected':''}>POPULAR</option>
+        </select>
+      </td>
+      <td><input class="spec-input narrow" type="number" step="0.1" min="0" max="5" value="${p.rating}" oninput="specFieldChange(${i},'rating',+this.value)" placeholder="0-5"></td>
+      <td><button class="spec-del-btn" onclick="deleteSpecPhone(${i})" title="Delete phone">🗑</button></td>
+    </tr>
+  `).join('');
+}
+
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function specFieldChange(idx, field, value) {
+  specEditorData[idx][field] = value;
+  markSpecUnsaved();
+}
+
+function markSpecUnsaved() {
+  specHasUnsaved = true;
+  const dot = document.getElementById('specUnsavedDot');
+  if (dot) dot.style.display = 'inline-block';
+}
+
+function saveSpecEdits() {
+  // Sync specEditorData back into PHONES
+  PHONES.length = 0;
+  specEditorData.forEach(p => PHONES.push({...p}));
+  // Persist to localStorage
+  localStorage.setItem(SPEC_STORAGE_KEY, JSON.stringify(specEditorData));
+  localStorage.removeItem(SPEC_STORAGE_KEY + '_deleted');
+  specHasUnsaved = false;
+  const dot = document.getElementById('specUnsavedDot');
+  if (dot) dot.style.display = 'none';
+  // Re-render catalog & compare grid with updated data
+  filterPhones();
+  renderComparePickGrid();
+  updateStatCount();
+  showToast('✅ Specs saved to browser storage! Catalog updated.');
+}
+
+// ── Download current specs as a JSON file ──
+function downloadSpecsJSON() {
+  const ts = new Date().toISOString().slice(0,10);
+  const filename = `iSamStore_phones_${ts}.json`;
+  const payload = {
+    exportedAt: new Date().toISOString(),
+    source: 'iSamStore Spec Editor',
+    phones: specEditorData
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast(`⬇ Downloaded "${filename}" — ${specEditorData.length} phones`);
+}
+
+// ── Import specs from a downloaded JSON file ──
+function importSpecsJSON(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      const phones = Array.isArray(parsed) ? parsed : (parsed.phones || null);
+      if (!phones || !phones.length) throw new Error('No phones array found');
+      if (!confirm(`Import ${phones.length} phones from "${file.name}"?\nThis will replace your current spec editor data (your browser storage will be updated when you click Save).`)) return;
+      specEditorData = phones.map((p, i) => ({
+        id: p.id ?? (i + 1),
+        brand: p.brand || 'Samsung',
+        name: p.name || 'Unknown Phone',
+        price: +p.price || 0,
+        ugx: +p.ugx || +p.price || 0,
+        ram: +p.ram || 4,
+        storage: p.storage || '128GB',
+        camera: p.camera || '50MP',
+        battery: +p.battery || 4000,
+        network: p.network || '5G',
+        chipset: p.chipset || '',
+        display: p.display || '',
+        category: p.category || 'midrange',
+        rating: +p.rating || 4.0,
+        reviews: +p.reviews || 0,
+        badge: p.badge || '',
+        priceDrop: !!p.priceDrop,
+        dropPct: p.dropPct || 0
+      }));
+      renderSpecTable();
+      markSpecUnsaved();
+      showToast(`⬆ Imported ${specEditorData.length} phones — click 💾 Save to apply.`);
+    } catch(err) {
+      alert('❌ Failed to import: ' + err.message + '\nMake sure the file is a valid iSamStore JSON export.');
+    }
+    // Reset file input so same file can be re-imported
+    event.target.value = '';
+  };
+  reader.readAsText(file);
+}
+
+function resetSpecEdits() {
+  if (!confirm('Reset all spec edits and restore built-in phone data?')) return;
+  localStorage.removeItem(SPEC_STORAGE_KEY);
+  localStorage.removeItem(SPEC_STORAGE_KEY + '_deleted');
+  showToast('🗑 Specs reset — please refresh the page to restore defaults.');
+}
+
+function addNewPhone() {
+  const newId = Math.max(...specEditorData.map(p=>p.id), 100) + 1;
+  specEditorData.push({
+    id: newId, brand:'Samsung', name:'New Phone', price:299, ugx:299,
+    ram:6, storage:'128GB', camera:'50MP', battery:5000, network:'5G',
+    chipset:'', display:'6.5"', category:'midrange', rating:4.0, reviews:0,
+    badge:'', priceDrop:false
+  });
+  renderSpecTable();
+  markSpecUnsaved();
+  // Scroll to bottom of table
+  const wrap = document.querySelector('.spec-table-scroll');
+  if (wrap) wrap.scrollTop = wrap.scrollHeight;
+  showToast('➕ New phone row added — fill in details and save.');
+}
+
+function deleteSpecPhone(idx) {
+  const p = specEditorData[idx];
+  if (!confirm(`Delete "${p.name}"? This will remove it from the catalog after saving.`)) return;
+  specEditorData.splice(idx, 1);
+  renderSpecTable();
+  markSpecUnsaved();
+  showToast(`🗑 "${p.name}" removed — click Save to confirm.`);
+}
+
+function updateStatCount() {
+  const el = document.getElementById('statPhones');
+  if (el) el.textContent = PHONES.length;
+  const el2 = document.getElementById('admTotalPhones');
+  if (el2) el2.textContent = PHONES.length;
+}
+
+// Init spec editor when admin page is shown
+const _origShowPage = showPage;
+function showPage(p) {
+  _origShowPage(p);
+  if (p === 'admin') {
+    setTimeout(() => {
+      if (!specEditorData.length) loadSpecData();
+      renderSpecTable();
+    }, 50);
+  }
+}
+
+// Also init on DOMContentLoaded if already on admin
+document.addEventListener('DOMContentLoaded', () => {
+  loadSpecData();
+  // Apply saved specs to catalog immediately
+  filterPhones();
+  renderComparePickGrid();
+  updateStatCount();
+});
+</script>
+</body>
+</html>
